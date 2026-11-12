@@ -1,0 +1,6 @@
+{
+  "name": "AETHER — Private Noir Cinema & AI Discovery",
+  "description": "Privacy-first 19+ independent & AI-powered cinema discovery and streaming platform featuring horizontal spatial navigation, Whisper AI concierge, Personal TV Director Mode, and Crypto Ad-Ops ledger.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

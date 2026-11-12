@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Vazirmatn:wght@300;400;500;700;800&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-editorial: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-vazir: 'Vazirmatn', 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --aether-obsidian: #050305;
+    --aether-crimson: #E11D48;
+    --aether-burgundy: #881337;
+    --aether-champagne: #F3E5AB;
+    --aether-amber: #D97706;
+  }
+
+  body {
+    background-color: #050305;
+    color: #F5F2F4;
+    font-family: var(--font-sans);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+    touch-action: none;
+  }
+
+  .font-editorial {
+    font-family: var(--font-editorial);
+    letter-spacing: -0.015em;
+  }
+
+  .font-vazir {
+    font-family: var(--font-vazir);
+    font-feature-settings: "ss01" 1, "tnum" 1;
+    letter-spacing: -0.01em;
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Hide scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ============================================================================
+   BESPOKE EDITORIAL & ARCHITECTURAL SURFACES (ZERO-PILL CLICHÉ)
+   ============================================================================ */
+
+/* Razor-sharp 0.5px horizontal hairline fading to transparent at both ends */
+.editorial-hairline-h {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.14) 22%,
+    rgba(251, 113, 133, 0.28) 50%,
+    rgba(255, 255, 255, 0.14) 78%,
+    transparent 100%
+  );
+  transform: scaleY(0.5);
+}
+
+/* Razor-sharp 0.5px vertical hairline fading to transparent at top & bottom */
+.editorial-hairline-v {
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.18) 25%,
+    rgba(251, 113, 133, 0.32) 50%,
+    rgba(255, 255, 255, 0.18) 75%,
+    transparent 100%
+  );
+  transform: scaleX(0.5);
+}
+
+/* Frameless Atmospheric Hero Card Bottom Mask */
+.hero-card-mask {
+  mask-image: linear-gradient(to bottom, #000000 76%, rgba(0, 0, 0, 0.72) 91%, transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000000 76%,
+    rgba(0, 0, 0, 0.72) 91%,
+    transparent 100%
+  );
+}
+
+/* Signature Champagne / Rose-Gold Luxury Primary CTA */
+.luxury-cta-primary {
+  background: linear-gradient(135deg, #FFFDF9 0%, #F7E7CE 52%, #FDA4AF 100%);
+  color: #090406;
+  box-shadow:
+    0 18px 40px -10px rgba(225, 29, 72, 0.42),
+    0 4px 14px -2px rgba(255, 255, 255, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition:
+    transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 180ms ease;
+}
+.luxury-cta-primary:hover {
+  filter: brightness(1.04);
+  box-shadow:
+    0 22px 48px -10px rgba(225, 29, 72, 0.56),
+    0 6px 18px -2px rgba(255, 255, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+.luxury-cta-primary:active {
+  transform: scale(0.975);
+}
+
+/* Bespoke Smoked Glass Surfaces */
+.smoked-glass-bar {
+  background: linear-gradient(
+    180deg,
+    rgba(22, 12, 18, 0.84) 0%,
+    rgba(9, 5, 8, 0.94) 100%
+  );
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  box-shadow:
+    0 26px 60px -12px rgba(0, 0, 0, 0.95),
+    inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
+}
+
+.smoked-glass-sheet {
+  background: linear-gradient(
+    180deg,
+    rgba(24, 13, 19, 0.94) 0%,
+    rgba(8, 4, 7, 0.98) 100%
+  );
+  backdrop-filter: blur(36px) saturate(170%);
+  -webkit-backdrop-filter: blur(36px) saturate(170%);
+  box-shadow:
+    0 36px 90px -12px rgba(0, 0, 0, 0.98),
+    inset 0 0.5px 0 rgba(251, 113, 133, 0.22);
+}
+
+/* ============================================================================
+   GPU-SAFE 3D SPATIAL ENGINE (PRE-CACHED LAYER COMPOSITING, ZERO GPU CRASH)
+   ============================================================================ */
+
+.perspective-stage {
+  perspective: 1200px;
+}
+
+.gpu-cached-page {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 380ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gpu-cached-card {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition:
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 340ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 420ms ease;
+}
+
+/* Subtle Velvet Boudoir Perspective Floor & Ceiling Grids */
+.spatial-3d-floor {
+  position: absolute;
+  width: 200%;
+  height: 110%;
+  left: -50%;
+  bottom: -44%;
+  transform: perspective(750px) rotateX(74deg);
+  transform-origin: center top;
+  background-image:
+    linear-gradient(to right, rgba(251, 113, 133, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(251, 113, 133, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 65% 60% at 50% 25%, black 12%, transparent 76%);
+  -webkit-mask-image: radial-gradient(ellipse 65% 60% at 50% 25%, black 12%, transparent 76%);
+  pointer-events: none;
+}
+
+.spatial-3d-ceiling {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  left: -50%;
+  top: -44%;
+  transform: perspective(750px) rotateX(-74deg);
+  transform-origin: center bottom;
+  background-image:
+    linear-gradient(to right, rgba(243, 229, 171, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(243, 229, 171, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 60% 55% at 50% 75%, black 10%, transparent 72%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 75%, black 10%, transparent 72%);
+  pointer-events: none;
+}
+
+.shadow-3d-card {
+  box-shadow:
+    0 40px 90px -16px rgba(0, 0, 0, 0.96),
+    0 18px 36px -10px rgba(0, 0, 0, 0.85),
+    inset 0 0.5px 0 0 rgba(255, 255, 255, 0.18);
+}
