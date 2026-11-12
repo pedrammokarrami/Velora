@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "AETHER 18+ • Luxury Adult Cinema & Global 100 AI",
+  "short_name": "AETHER 18+",
+  "description": "Zero-account 18+ luxury adult streaming platform powered by 5D AI taste curation and the Global Top-100 source intelligence index.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#050305",
+  "theme_color": "#050305",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

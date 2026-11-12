@@ -48,6 +48,10 @@ import {
   searchCatalogWithAi,
   synthesizeFilmCriticReview,
   matchGlobalSourcesForQuery,
+  fetchPersistedServerCatalog,
+  persistCustomFilmToServer,
+  syncDnaProfileToServer,
+  fetchDnaProfileFromServer,
   formatSecondsToTimecode,
   createHarmonicWaveform,
   computeCosineSimilarity,
@@ -363,7 +367,7 @@ const Cached3DCinemaCard: React.FC<Cached3DCardProps> = React.memo(
               const target = e.currentTarget;
               if (!target.dataset.fallbackApplied) {
                 target.dataset.fallbackApplied = '1';
-                target.src = '/src/assets/images/boudoir_crimson_silk_suite_1794443433215.jpg';
+                target.src = './assets/images/boudoir_crimson_silk_suite_1794443433215.jpg';
               }
             }}
             className="w-full h-full object-cover object-center scale-[1.03] pointer-events-none"
@@ -555,6 +559,25 @@ export default function App() {
     reservePoolRef.current = reservePool;
   }, [reservePool]);
 
+  // Load persisted custom 4K streams from full-stack server (/api/catalog) on startup
+  useEffect(() => {
+    let mounted = true;
+    fetchPersistedServerCatalog().then((persistedItems) => {
+      if (!mounted || persistedItems.length === 0) return;
+      setCatalog((prev) => {
+        const existingIds = new Set(persistedItems.map((i) => i.id));
+        const combined = [...persistedItems, ...prev.filter((i) => !existingIds.has(i.id))].slice(
+          0,
+          10
+        );
+        return combined.map((item, idx) => ({ ...item, indexNumber: idx + 1 }));
+      });
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   // Pre-cache all poster images into browser memory
   useEffect(() => {
     const allItems = [...catalog, ...reservePool];
@@ -629,6 +652,7 @@ export default function App() {
   const [liveFps, setLiveFps] = useState<number>(60);
   const [memoryUsedMb, setMemoryUsedMb] = useState<number>(38.4);
   const [diagnosticsRunCount, setDiagnosticsRunCount] = useState<number>(1);
+  const [githubRepoSlug, setGithubRepoSlug] = useState<string>('pedrammokarrami/Velora');
 
   useEffect(() => {
     let frameCount = 0;
@@ -1378,7 +1402,7 @@ export default function App() {
       id: newId,
       indexNumber: 1,
       streamUrl: safeStreamUrl,
-      posterUrl: '/src/assets/images/boudoir_crimson_silk_suite_1794443433215.jpg',
+      posterUrl: './assets/images/boudoir_crimson_silk_suite_1794443433215.jpg',
       pillar: newFilmPillar,
       resolution: '4K 60FPS',
       durationSec: 180,
@@ -1452,14 +1476,32 @@ export default function App() {
     setCatalog((prev) =>
       [newItem, ...prev.slice(0, 9)].map((f, i) => ({ ...f, indexNumber: i + 1 }))
     );
+    persistCustomFilmToServer(newItem);
     setNewFilmTitle('');
     setNewFilmStreamUrl('');
     setSettingsSheetOpen(false);
     setActiveCardIndex(0);
   };
 
-  const handleApplyDnaKey = () => {
-    const decoded = decodeTasteDnaKey(dnaInputCode);
+  // Sync current 6-char DNA key to server vault whenever taste vector or theme changes
+  useEffect(() => {
+    syncDnaProfileToServer(currentDnaKey, sessionMoodVector, activeThemeId);
+  }, [currentDnaKey, sessionMoodVector, activeThemeId]);
+
+  const handleApplyDnaKey = async () => {
+    const cleanCode = dnaInputCode.trim().toUpperCase();
+    if (!cleanCode) return;
+
+    const serverProfile = await fetchDnaProfileFromServer(cleanCode);
+    if (serverProfile) {
+      setSessionMoodVector(serverProfile.vector);
+      setActiveThemeId(serverProfile.themeId as SensualThemeId);
+      executeArchiveAiSearch('DNA Taste Sync', serverProfile.vector);
+      setDnaInputCode('');
+      return;
+    }
+
+    const decoded = decodeTasteDnaKey(cleanCode);
     if (!decoded) return;
     setSessionMoodVector(decoded.vector);
     setActiveThemeId(decoded.themeId);
@@ -2253,9 +2295,50 @@ export default function App() {
                     type="button"
                     onClick={() => {
                       setVoicePulse(true);
+                      const SpeechRec =
+                        (window as unknown as { SpeechRecognition?: new () => { lang: string; start: () => void; onresult: ((e: { results: { [key: number]: { [key: number]: { transcript: string } } } }) => void) | null; onerror: (() => void) | null; onend: (() => void) | null } }).SpeechRecognition ||
+                        (window as unknown as { webkitSpeechRecognition?: new () => { lang: string; start: () => void; onresult: ((e: { results: { [key: number]: { [key: number]: { transcript: string } } } }) => void) | null; onerror: (() => void) | null; onend: (() => void) | null } }).webkitSpeechRecognition;
+
+                      if (SpeechRec) {
+                        try {
+                          const recognition = new SpeechRec();
+                          recognition.lang =
+                            worldLang === 'fa'
+                              ? 'fa-IR'
+                              : worldLang === 'ar'
+                              ? 'ar-SA'
+                              : 'en-US';
+                          recognition.onresult = (event) => {
+                            const transcript = event.results?.[0]?.[0]?.transcript;
+                            setVoicePulse(false);
+                            if (transcript) {
+                              setAiPrompt(transcript);
+                              executeProprietaryAiQuery(transcript, focusedFilm, false);
+                            }
+                          };
+                          recognition.onerror = () => {
+                            setVoicePulse(false);
+                            executeProprietaryAiQuery(
+                              'بهترین فیلم 4K مناسب سلیقه من از ۱۰۰ منبع جهانی',
+                              focusedFilm,
+                              false
+                            );
+                          };
+                          recognition.onend = () => setVoicePulse(false);
+                          recognition.start();
+                          return;
+                        } catch {
+                          // fallback below
+                        }
+                      }
+
                       window.setTimeout(() => {
                         setVoicePulse(false);
-                        executeProprietaryAiQuery('بهترین فیلم 4K مناسب سلیقه من از ۱۰۰ منبع جهانی', focusedFilm, false);
+                        executeProprietaryAiQuery(
+                          'بهترین فیلم 4K مناسب سلیقه من از ۱۰۰ منبع جهانی',
+                          focusedFilm,
+                          false
+                        );
                       }, 650);
                     }}
                     className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 cursor-pointer ${
@@ -2491,7 +2574,7 @@ export default function App() {
               const target = e.currentTarget;
               if (!target.dataset.fallbackApplied) {
                 target.dataset.fallbackApplied = '1';
-                target.src = '/src/assets/images/boudoir_crimson_silk_suite_1794443433215.jpg';
+                target.src = './assets/images/boudoir_crimson_silk_suite_1794443433215.jpg';
               }
             }}
             className="absolute inset-0 w-full h-full object-cover opacity-35 scale-105 pointer-events-none"
@@ -3217,7 +3300,7 @@ export default function App() {
                         if (!target.dataset.fallbackApplied) {
                           target.dataset.fallbackApplied = '1';
                           target.src =
-                            '/src/assets/images/boudoir_crimson_silk_suite_1794443433215.jpg';
+                            './assets/images/boudoir_crimson_silk_suite_1794443433215.jpg';
                         }
                       }}
                       className="w-full h-full object-cover"
@@ -3777,6 +3860,94 @@ export default function App() {
                   </span>
                 </div>
               ))}
+            </div>
+
+            {/* GitHub Pages & Cloud Live Runner URL Generator */}
+            <div className="p-3.5 rounded-xl bg-white/[0.04] space-y-2.5">
+              <div className="flex items-center justify-between text-xs text-amber-200 font-medium">
+                <span>اجرای زنده پروژه روی گیت‌هاب (GitHub Pages / StackBlitz)</span>
+                <span className="text-[10px] font-mono-tabular text-emerald-300">
+                  AUTO-DEPLOY READY
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <input
+                  type="text"
+                  dir="ltr"
+                  value={githubRepoSlug}
+                  onChange={(e) => setGithubRepoSlug(e.target.value.trim())}
+                  placeholder="username/repo (e.g. pedrammokarrami/Velora)"
+                  className="flex-1 h-8 px-2.5 rounded-lg bg-black/50 text-xs font-mono-tabular text-white placeholder-white/40 focus:outline-none"
+                />
+              </div>
+
+              {(() => {
+                const cleanSlug = githubRepoSlug.replace(/^https?:\/\/github\.com\//i, '').replace(/\/+$/, '');
+                const [ghUser = 'pedrammokarrami', ghRepo = 'Velora'] = cleanSlug.split('/');
+                const pagesUrl = `https://${ghUser}.github.io/${ghRepo}/`;
+                const stackblitzUrl = `https://stackblitz.com/github/${ghUser}/${ghRepo}`;
+                const codesandboxUrl = `https://githubbox.com/${ghUser}/${ghRepo}`;
+
+                return (
+                  <div className="space-y-1.5 text-[11px]" dir="ltr">
+                    <div className="p-2 rounded-lg bg-black/50 flex items-center justify-between gap-2">
+                      <div className="min-w-0">
+                        <div className="text-[10px] text-amber-200">1. GitHub Pages Live App URL:</div>
+                        <div className="font-mono-tabular text-white truncate select-all">
+                          {pagesUrl}
+                        </div>
+                      </div>
+                      <a
+                        href={pagesUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-2.5 py-1 rounded bg-rose-500/25 hover:bg-rose-500/40 text-amber-200 text-[10px] font-semibold shrink-0"
+                      >
+                        Open ↗
+                      </a>
+                    </div>
+
+                    <div className="p-2 rounded-lg bg-black/50 flex items-center justify-between gap-2">
+                      <div className="min-w-0">
+                        <div className="text-[10px] text-emerald-300">
+                          2. Instant GitHub Runner (StackBlitz Full-Stack):
+                        </div>
+                        <div className="font-mono-tabular text-white truncate select-all">
+                          {stackblitzUrl}
+                        </div>
+                      </div>
+                      <a
+                        href={stackblitzUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-2.5 py-1 rounded bg-emerald-500/25 hover:bg-emerald-500/40 text-emerald-200 text-[10px] font-semibold shrink-0"
+                      >
+                        Run Live ↗
+                      </a>
+                    </div>
+
+                    <div className="p-2 rounded-lg bg-black/50 flex items-center justify-between gap-2">
+                      <div className="min-w-0">
+                        <div className="text-[10px] text-sky-300">
+                          3. CodeSandbox Instant GitHub Runner:
+                        </div>
+                        <div className="font-mono-tabular text-white truncate select-all">
+                          {codesandboxUrl}
+                        </div>
+                      </div>
+                      <a
+                        href={codesandboxUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-2.5 py-1 rounded bg-sky-500/25 hover:bg-sky-500/40 text-sky-200 text-[10px] font-semibold shrink-0"
+                      >
+                        Run Live ↗
+                      </a>
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
 
             <button

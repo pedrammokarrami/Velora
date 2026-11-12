@@ -670,7 +670,7 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
     indexNumber: 1,
     streamUrl:
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-    posterUrl: '/src/assets/images/boudoir_crimson_silk_suite_1794443433215.jpg',
+    posterUrl: './assets/images/boudoir_crimson_silk_suite_1794443433215.jpg',
     pillar: 'LIVE',
     resolution: '4K 60FPS',
     durationSec: 180,
@@ -762,7 +762,7 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
     indexNumber: 2,
     streamUrl:
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-    posterUrl: '/src/assets/images/editorial_amber_hotel_noir_1794443435341.jpg',
+    posterUrl: './assets/images/editorial_amber_hotel_noir_1794443435341.jpg',
     pillar: 'LIVE',
     resolution: '4K 60FPS',
     durationSec: 160,
@@ -854,7 +854,7 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
     indexNumber: 3,
     streamUrl:
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4',
-    posterUrl: '/src/assets/images/ai_erotic_velvet_illusion_1794443435845.jpg',
+    posterUrl: './assets/images/ai_erotic_velvet_illusion_1794443435845.jpg',
     pillar: 'AI',
     resolution: '4K 60FPS',
     durationSec: 210,
@@ -946,7 +946,7 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
     indexNumber: 4,
     streamUrl:
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
-    posterUrl: '/src/assets/images/anime_nocturne_neon_boudoir_1794443444307.jpg',
+    posterUrl: './assets/images/anime_nocturne_neon_boudoir_1794443444307.jpg',
     pillar: 'ANIMATION',
     resolution: '4K 60FPS',
     durationSec: 195,
@@ -1038,7 +1038,7 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
     indexNumber: 5,
     streamUrl:
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
-    posterUrl: '/src/assets/images/cinema_crimson_penthouse_1794408993203.jpg',
+    posterUrl: './assets/images/cinema_crimson_penthouse_1794408993203.jpg',
     pillar: 'LIVE',
     resolution: '4K 60FPS',
     durationSec: 205,
@@ -1130,7 +1130,7 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
     indexNumber: 6,
     streamUrl:
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoy.mp4',
-    posterUrl: '/src/assets/images/cinema_noir_velvet_rain_1794398988857.jpg',
+    posterUrl: './assets/images/cinema_noir_velvet_rain_1794398988857.jpg',
     pillar: 'LIVE',
     resolution: '4K 60FPS',
     durationSec: 175,
@@ -1222,7 +1222,7 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
     indexNumber: 7,
     streamUrl:
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
-    posterUrl: '/src/assets/images/cinema_obsidian_sonata_1794398992852.jpg',
+    posterUrl: './assets/images/cinema_obsidian_sonata_1794398992852.jpg',
     pillar: 'LIVE',
     resolution: '4K 60FPS',
     durationSec: 195,
@@ -1314,7 +1314,7 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
     indexNumber: 8,
     streamUrl:
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4',
-    posterUrl: '/src/assets/images/cinema_midnight_express_paris_1794408998635.jpg',
+    posterUrl: './assets/images/cinema_midnight_express_paris_1794408998635.jpg',
     pillar: 'LIVE',
     resolution: '4K 60FPS',
     durationSec: 190,
@@ -1406,7 +1406,7 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
     indexNumber: 9,
     streamUrl:
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4',
-    posterUrl: '/src/assets/images/boudoir_crimson_silk_suite_1794443433215.jpg',
+    posterUrl: './assets/images/boudoir_crimson_silk_suite_1794443433215.jpg',
     pillar: 'AI',
     resolution: '4K 60FPS',
     durationSec: 165,
@@ -1498,7 +1498,7 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
     indexNumber: 10,
     streamUrl:
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackSeeTheWorld.mp4',
-    posterUrl: '/src/assets/images/anime_nocturne_neon_boudoir_1794443444307.jpg',
+    posterUrl: './assets/images/anime_nocturne_neon_boudoir_1794443444307.jpg',
     pillar: 'ANIMATION',
     resolution: '4K 60FPS',
     durationSec: 170,
@@ -1967,11 +1967,11 @@ export async function searchCatalogWithAi(
     canonicalTitle: `${item.canonicalTitle} · Uncut Edition`
   }));
 
-  const topFilm = activeWindow10[0] ?? INITIAL_CATALOG_DATA[0];
-  const topScene = topFilm.scenes[2] ?? topFilm.scenes[1] ?? topFilm.scenes[0];
-  const scorePct = Math.round(computeCosineSimilarity(updatedVector, topFilm.moodVector) * 100);
+  let topFilm = activeWindow10[0] ?? INITIAL_CATALOG_DATA[0];
+  let topScene = topFilm.scenes[2] ?? topFilm.scenes[1] ?? topFilm.scenes[0];
+  let scorePct = Math.round(computeCosineSimilarity(updatedVector, topFilm.moodVector) * 100);
 
-  const spokenExplanation = synthesizeFilmCriticReview(
+  let spokenExplanation = synthesizeFilmCriticReview(
     preferredLang,
     topFilm,
     topScene,
@@ -1979,6 +1979,48 @@ export async function searchCatalogWithAi(
     topMatchedSource,
     matchedCountry
   );
+
+  // Try real Server-Side Gemini 3.8 Flash Curation (/api/ai/curate) with fast 2.4s timeout
+  try {
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 2400);
+    const serverRes = await fetch('/api/ai/curate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      signal: controller.signal,
+      body: JSON.stringify({
+        query: rawQuery,
+        lang: preferredLang,
+        catalog: activeWindow10,
+        topSources: matchedSources
+      })
+    });
+    window.clearTimeout(timeoutId);
+
+    if (serverRes.ok) {
+      const serverData = await serverRes.json();
+      if (serverData?.spokenExplanation) {
+        spokenExplanation = String(serverData.spokenExplanation);
+      }
+      if (typeof serverData?.cosineMatchScore === 'number') {
+        scorePct = Math.min(99, Math.max(85, serverData.cosineMatchScore));
+      }
+      if (serverData?.primaryFilmId) {
+        const matchedIdx = activeWindow10.findIndex((f) => f.id === serverData.primaryFilmId);
+        if (matchedIdx > 0) {
+          const [picked] = activeWindow10.splice(matchedIdx, 1);
+          activeWindow10.unshift(picked);
+          activeWindow10.forEach((item, idx) => {
+            item.indexNumber = idx + 1;
+          });
+          topFilm = activeWindow10[0];
+          topScene = topFilm.scenes[2] ?? topFilm.scenes[1] ?? topFilm.scenes[0];
+        }
+      }
+    }
+  } catch {
+    // Seamless fallback to <2ms local 5D vector engine
+  }
 
   return {
     activeWindow10,
@@ -2094,14 +2136,14 @@ export async function runAetherAiCurator(params: {
 
   scoredFilms.sort((a, b) => b.similarity - a.similarity);
 
-  const primaryMatch = parsed.wantsExplanationOfCurrent
+  let primaryMatch = parsed.wantsExplanationOfCurrent
     ? currentFocusedFilm
     : scoredFilms[0]?.film ?? currentFocusedFilm;
-  const cosineScorePct = Math.round(
+  let cosineScorePct = Math.round(
     computeCosineSimilarity(updatedVector, primaryMatch.moodVector) * 100
   );
 
-  const bestScene =
+  let bestScene =
     primaryMatch.scenes.find((s) => {
       if (parsed.vectorDelta.intense && s.intensityScore >= 9) return true;
       if (parsed.vectorDelta.sensual && s.moodTags.includes('sensual')) return true;
@@ -2162,11 +2204,11 @@ export async function runAetherAiCurator(params: {
         }
       }
     } catch {
-      // Fallback to local critic synthesizer
+      // Fallback to server/local critic synthesizer
     }
   }
 
-  const spokenExplanation = synthesizeFilmCriticReview(
+  let spokenExplanation = synthesizeFilmCriticReview(
     outputLang,
     primaryMatch,
     bestScene,
@@ -2174,6 +2216,42 @@ export async function runAetherAiCurator(params: {
     topMatchedSource,
     matchedCountry
   );
+
+  try {
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 2400);
+    const serverRes = await fetch('/api/ai/curate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      signal: controller.signal,
+      body: JSON.stringify({
+        query: userQuery,
+        lang: outputLang,
+        catalog,
+        topSources: matchedSources
+      })
+    });
+    window.clearTimeout(timeoutId);
+
+    if (serverRes.ok) {
+      const serverData = await serverRes.json();
+      if (serverData?.spokenExplanation) {
+        spokenExplanation = String(serverData.spokenExplanation);
+      }
+      if (typeof serverData?.cosineMatchScore === 'number') {
+        cosineScorePct = Math.min(99, Math.max(85, serverData.cosineMatchScore));
+      }
+      if (serverData?.primaryFilmId && !parsed.wantsExplanationOfCurrent) {
+        const found = catalog.find((f) => f.id === serverData.primaryFilmId);
+        if (found) {
+          primaryMatch = found;
+          bestScene = found.scenes[2] ?? found.scenes[1] ?? found.scenes[0];
+        }
+      }
+    }
+  } catch {
+    // Seamless local fallback
+  }
 
   return {
     detectedLanguage: (['fa', 'en', 'ar', 'tr', 'es', 'fr'].includes(outputLang)
@@ -2199,3 +2277,66 @@ export async function runAetherAiCurator(params: {
     updatedMoodVector: updatedVector
   };
 }
+
+// ============================================================================
+// REAL FULL-STACK SERVER SYNC HELPERS (CATALOG & CROSS-DEVICE DNA VAULT)
+// ============================================================================
+
+export async function fetchPersistedServerCatalog(): Promise<CatalogFilmItem[]> {
+  try {
+    const res = await fetch('/api/catalog');
+    if (!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data?.items) ? (data.items as CatalogFilmItem[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+export async function persistCustomFilmToServer(item: CatalogFilmItem): Promise<void> {
+  try {
+    await fetch('/api/catalog', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ item })
+    });
+  } catch {
+    // ignore offline error
+  }
+}
+
+export async function syncDnaProfileToServer(
+  code: string,
+  vector: MoodVector5D,
+  themeId: string
+): Promise<void> {
+  try {
+    await fetch('/api/dna/sync', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code, vector, themeId })
+    });
+  } catch {
+    // ignore offline error
+  }
+}
+
+export async function fetchDnaProfileFromServer(
+  code: string
+): Promise<{ vector: MoodVector5D; themeId: string } | null> {
+  try {
+    const res = await fetch(`/api/dna/${encodeURIComponent(code.trim().toUpperCase())}`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (data?.entry?.vector && data?.entry?.themeId) {
+      return {
+        vector: data.entry.vector as MoodVector5D,
+        themeId: String(data.entry.themeId)
+      };
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
