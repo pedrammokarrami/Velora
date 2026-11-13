@@ -1,48 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Vazirmatn:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Changa:wght@400;500;600;700;800&family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;600;700;800&family=Courier+Prime:wght@400;700&family=Lalezar&family=Montserrat:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @layer base {
   :root {
-    --font-editorial: 'Cormorant Garamond', Georgia, serif;
-    --font-sans: 'Plus Jakarta Sans', 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-vazir: 'Vazirmatn', 'Plus Jakarta Sans', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-    --aether-obsidian: #050305;
-    --aether-crimson: #E11D48;
-    --aether-burgundy: #881337;
-    --aether-champagne: #F3E5AB;
-    --aether-amber: #D97706;
+    /* Dedicated Cinema Typography Stack (Hollywood + Iranian Cinema Poster & Screenplay Fonts) */
+    --font-editorial: 'Cinzel', 'Lalezar', 'Amiri', serif;
+    --font-cinema-poster: 'Bebas Neue', 'Lalezar', 'Cinzel', sans-serif;
+    --font-sans: 'Montserrat', 'Changa', 'Lalezar', sans-serif;
+    --font-vazir: 'Changa', 'Lalezar', 'Montserrat', sans-serif;
+    --font-mono: 'Courier Prime', monospace;
+    --obsidian: #06070C;
+    --obsidian-elevated: #0D101A;
+    --amber-gold: #F5B942;
+    --amber-soft: #F3E5AB;
   }
 
+  html,
   body {
-    background-color: #050305;
-    color: #F5F2F4;
-    font-family: var(--font-sans);
-    overflow: hidden;
+    background-color: #06070C;
+    color: #F5F7FA;
+    font-family: var(--font-sans) !important;
+    letter-spacing: 0.01em;
+    min-height: 100dvh;
+    max-width: 100vw;
+    overflow-x: clip;
+    touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    user-select: none;
-    touch-action: none;
   }
 
+  /* Apply Cinema Poster & Title Card Typography to all Headings & Titles */
+  h1,
+  h2,
+  h3,
   .font-editorial {
-    font-family: var(--font-editorial);
-    letter-spacing: -0.015em;
+    font-family: var(--font-editorial) !important;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+  }
+
+  h4,
+  h5,
+  h6,
+  button,
+  nav,
+  label,
+  select,
+  input,
+  textarea {
+    font-family: var(--font-sans) !important;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  [role="button"] {
+    touch-action: manipulation;
+  }
+
+  /* Prevent iOS Safari / Android Chromium auto-zoom when focusing inputs */
+  @media (max-width: 767px) {
+    input,
+    select,
+    textarea {
+      font-size: 16px !important;
+    }
+  }
+
+  .reduced-motion-mode *,
+  .reduced-motion-mode *::before,
+  .reduced-motion-mode *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 
   .font-vazir {
-    font-family: var(--font-vazir);
-    font-feature-settings: "ss01" 1, "tnum" 1;
-    letter-spacing: -0.01em;
+    font-family: var(--font-vazir) !important;
+  }
+
+  .font-cinema-marquee {
+    font-family: var(--font-cinema-poster) !important;
+    letter-spacing: 0.06em;
   }
 
   .font-mono-tabular {
-    font-family: var(--font-mono);
+    font-family: var(--font-mono) !important;
     font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
   }
 }
 
-/* Hide scrollbars */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -51,164 +101,119 @@
   scrollbar-width: none;
 }
 
-/* ============================================================================
-   BESPOKE EDITORIAL & ARCHITECTURAL SURFACES (ZERO-PILL CLICHÉ)
-   ============================================================================ */
-
-/* Razor-sharp 0.5px horizontal hairline fading to transparent at both ends */
-.editorial-hairline-h {
-  height: 1px;
+/* Smooth glass pill without any scale/zoom distortion */
+.liquid-glass-pill {
+  border-radius: 9999px;
   background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.14) 22%,
-    rgba(251, 113, 133, 0.28) 50%,
-    rgba(255, 255, 255, 0.14) 78%,
-    transparent 100%
+    160deg,
+    rgba(255, 255, 255, 0.11) 0%,
+    rgba(13, 19, 34, 0.78) 55%,
+    rgba(245, 185, 66, 0.08) 100%
   );
-  transform: scaleY(0.5);
-}
-
-/* Razor-sharp 0.5px vertical hairline fading to transparent at top & bottom */
-.editorial-hairline-v {
-  width: 1px;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.18) 25%,
-    rgba(251, 113, 133, 0.32) 50%,
-    rgba(255, 255, 255, 0.18) 75%,
-    transparent 100%
-  );
-  transform: scaleX(0.5);
-}
-
-/* Frameless Atmospheric Hero Card Bottom Mask */
-.hero-card-mask {
-  mask-image: linear-gradient(to bottom, #000000 76%, rgba(0, 0, 0, 0.72) 91%, transparent 100%);
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    #000000 76%,
-    rgba(0, 0, 0, 0.72) 91%,
-    transparent 100%
-  );
-}
-
-/* Signature Champagne / Rose-Gold Luxury Primary CTA */
-.luxury-cta-primary {
-  background: linear-gradient(135deg, #FFFDF9 0%, #F7E7CE 52%, #FDA4AF 100%);
-  color: #090406;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow:
-    0 18px 40px -10px rgba(225, 29, 72, 0.42),
-    0 4px 14px -2px rgba(255, 255, 255, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 10px 26px -10px rgba(0, 0, 0, 0.82),
+    inset 0 1px 1px rgba(255, 255, 255, 0.24);
   transition:
-    transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1),
-    filter 180ms ease;
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
 }
-.luxury-cta-primary:hover {
-  filter: brightness(1.04);
+
+.liquid-glass-pill:hover {
+  transform: translateY(-1px);
+  border-color: rgba(245, 185, 66, 0.55);
   box-shadow:
-    0 22px 48px -10px rgba(225, 29, 72, 0.56),
-    0 6px 18px -2px rgba(255, 255, 255, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
-}
-.luxury-cta-primary:active {
-  transform: scale(0.975);
+    0 14px 30px -10px rgba(0, 0, 0, 0.9),
+    0 0 18px -4px rgba(245, 185, 66, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.38);
 }
 
-/* Bespoke Smoked Glass Surfaces */
-.smoked-glass-bar {
-  background: linear-gradient(
-    180deg,
-    rgba(22, 12, 18, 0.84) 0%,
-    rgba(9, 5, 8, 0.94) 100%
-  );
-  backdrop-filter: blur(28px) saturate(160%);
-  -webkit-backdrop-filter: blur(28px) saturate(160%);
-  box-shadow:
-    0 26px 60px -12px rgba(0, 0, 0, 0.95),
-    inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
+.liquid-glass-pill:active {
+  transform: translateY(1px);
 }
 
-.smoked-glass-sheet {
-  background: linear-gradient(
-    180deg,
-    rgba(24, 13, 19, 0.94) 0%,
-    rgba(8, 4, 7, 0.98) 100%
-  );
-  backdrop-filter: blur(36px) saturate(170%);
-  -webkit-backdrop-filter: blur(36px) saturate(170%);
-  box-shadow:
-    0 36px 90px -12px rgba(0, 0, 0, 0.98),
-    inset 0 0.5px 0 rgba(251, 113, 133, 0.22);
+@keyframes skeletonShimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
-/* ============================================================================
-   GPU-SAFE 3D SPATIAL ENGINE (PRE-CACHED LAYER COMPOSITING, ZERO GPU CRASH)
-   ============================================================================ */
-
-.perspective-stage {
-  perspective: 1200px;
+.poster-skeleton-shimmer {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, #0d1322 0%, #090e1a 100%);
 }
 
-.gpu-cached-page {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  transition:
-    transform 380ms cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 280ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.gpu-cached-card {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transition:
-    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 340ms cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 420ms ease;
-}
-
-/* Subtle Velvet Boudoir Perspective Floor & Ceiling Grids */
-.spatial-3d-floor {
+.poster-skeleton-shimmer::after {
+  content: '';
   position: absolute;
-  width: 200%;
-  height: 110%;
-  left: -50%;
-  bottom: -44%;
-  transform: perspective(750px) rotateX(74deg);
-  transform-origin: center top;
-  background-image:
-    linear-gradient(to right, rgba(251, 113, 133, 0.045) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(251, 113, 133, 0.045) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: radial-gradient(ellipse 65% 60% at 50% 25%, black 12%, transparent 76%);
-  -webkit-mask-image: radial-gradient(ellipse 65% 60% at 50% 25%, black 12%, transparent 76%);
-  pointer-events: none;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(245, 185, 66, 0.08) 48%,
+    rgba(255, 255, 255, 0.06) 52%,
+    transparent 80%
+  );
+  animation: skeletonShimmer 1.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
-.spatial-3d-ceiling {
-  position: absolute;
-  width: 200%;
-  height: 100%;
-  left: -50%;
-  top: -44%;
-  transform: perspective(750px) rotateX(-74deg);
-  transform-origin: center bottom;
-  background-image:
-    linear-gradient(to right, rgba(243, 229, 171, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(243, 229, 171, 0.03) 1px, transparent 1px);
-  background-size: 80px 80px;
-  mask-image: radial-gradient(ellipse 60% 55% at 50% 75%, black 10%, transparent 72%);
-  -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 75%, black 10%, transparent 72%);
-  pointer-events: none;
+/* Custom sleek range input (no scale zoom on hover/active) */
+input[type='range'].aether-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
 }
 
-.shadow-3d-card {
-  box-shadow:
-    0 40px 90px -16px rgba(0, 0, 0, 0.96),
-    0 18px 36px -10px rgba(0, 0, 0, 0.85),
-    inset 0 0.5px 0 0 rgba(255, 255, 255, 0.18);
+input[type='range'].aether-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+input[type='range'].aether-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -8px;
+  height: 22px;
+  width: 22px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 35%, #fef3c7, #F5B942 70%, #927012 100%);
+  border: 2px solid #06070C;
+  box-shadow: 0 0 18px rgba(245, 185, 66, 0.55);
+  transition: box-shadow 180ms ease;
+}
+
+input[type='range'].aether-slider::-webkit-slider-thumb:hover,
+input[type='range'].aether-slider::-webkit-slider-thumb:active {
+  box-shadow: 0 0 24px rgba(245, 185, 66, 0.85);
+}
+
+input[type='range'].aether-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+input[type='range'].aether-slider::-moz-range-thumb {
+  height: 22px;
+  width: 22px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 35%, #fef3c7, #F5B942 70%, #927012 100%);
+  border: 2px solid #06070C;
+  box-shadow: 0 0 18px rgba(245, 185, 66, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poster-skeleton-shimmer::after {
+    animation: none;
+  }
 }

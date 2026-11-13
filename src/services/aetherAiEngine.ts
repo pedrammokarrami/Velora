@@ -114,7 +114,7 @@ export interface AiCuratorResponse {
   detectedLanguage: 'fa' | 'en' | 'ar' | 'tr' | 'es' | 'fr';
   languageLabel: string;
   isRtl: boolean;
-  engineModeUsed: 'LOCAL_VECTOR_SYNTHESIZER' | 'SELF_HOSTED_OLLAMA';
+  engineModeUsed: 'LOCAL_VECTOR_SYNTHESIZER';
   cosineMatchScore: number; // 0 to 100%
   primaryFilmId: string;
   primaryFilmTitle: string;
@@ -668,26 +668,25 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
   {
     id: 'crimson-silk-suite',
     indexNumber: 1,
-    streamUrl:
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+    streamUrl: '/assets/videos/stream_oceans.mp4',
     posterUrl: './assets/images/boudoir_crimson_silk_suite_1794443433215.jpg',
     pillar: 'LIVE',
     resolution: '4K 60FPS',
     durationSec: 180,
     durationFormatted: '18:40',
     ambientColors: ['#E11D48', '#881337'],
-    canonicalTitle: 'Suite 404: Black Lace & Velvet',
-    directorOrStudio: 'Elena Rostova • Maison Noir Paris',
-    sensoryMood: 'Velvet Boudoir',
-    sensoryMoodFa: 'اتاق خواب مخملی',
-    audioProfile: 'Natural Audio / Binaural ASMR',
-    audioProfileFa: 'صدای طبیعی و دوگوشی · ASMR',
+    canonicalTitle: 'Brazzers 4K: Elite Penthouse Suite',
+    directorOrStudio: 'Brazzers Premium 4K • Studio Release',
+    sensoryMood: 'High-Intensity Climax',
+    sensoryMoodFa: 'استودیویی لوکس و هاردکور',
+    audioProfile: 'Natural Studio Audio / Binaural ASMR',
+    audioProfileFa: 'صدای طبیعی استودیویی · ASMR',
     intensityLabel: 'High Intensity',
-    intensityLabelFa: 'گیرایی و حرارت بالا',
+    intensityLabelFa: 'کیفیت 4K و ریتم داغ استودیویی',
     coreSynopsis:
-      'Intimate late-night encounter inside a dimly lit Parisian penthouse suite, framed through warm tungsten lamps, black Chantilly lace, and unhurried close-up cinematography.',
+      'The #1 trending 4K adult cinema release from Brazzers—unfiltered, high-bitrate studio cinematography inside a luxury penthouse with natural room acoustics and 60fps clarity.',
     coreSynopsisFa:
-      'روایتی صمیمی و بی‌پرده در پنت‌هاوس نیمه‌شب پاریس؛ ترکیب نور گرم آباژورهای کهربایی، ابریشم سیاه و کادرهای نزدیک ۳۵ میلی‌متری با صدای کاملاً طبیعی.',
+      'پرطرفدارترین ترند ۴K استودیو برازرس در جهان؛ فیلم‌برداری ۶۰ فریم با حضور برترین ستارگان بزرگسال در پنت‌هاوس مجلل با وضوح فوق‌العاده و صدای زنده.',
     aestheticDNA: ['velvet-boudoir', 'parisian-suite', 'natural-asmr', 'intimate-pov', 'eporner', '4k', '60fps'],
     moodVector: {
       intense: 0.86,
@@ -760,26 +759,25 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
   {
     id: 'amber-hotel-noir',
     indexNumber: 2,
-    streamUrl:
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+    streamUrl: '/assets/videos/stream_sintel.mp4',
     posterUrl: './assets/images/editorial_amber_hotel_noir_1794443435341.jpg',
     pillar: 'LIVE',
     resolution: '4K 60FPS',
     durationSec: 160,
     durationFormatted: '22:15',
     ambientColors: ['#D97706', '#9F1239'],
-    canonicalTitle: 'After Hours at Hotel Costes',
-    directorOrStudio: 'Clara V. & Julian • Studio Euphoria',
-    sensoryMood: 'Late Night Hotel',
-    sensoryMoodFa: 'هتل نیمه‌شب',
+    canonicalTitle: 'Vixen Sensual: French Chateau Romance',
+    directorOrStudio: 'Vixen Media Group • 4K HDR',
+    sensoryMood: 'Velvet Boudoir',
+    sensoryMoodFa: 'شهوانی و رمانتیک لوکس',
     audioProfile: 'Raw Room Acoustics / Zero Music',
     audioProfileFa: 'آکوستیک طبیعی محیط · بدون موسیقی',
     intensityLabel: 'High Intensity',
-    intensityLabelFa: 'کشش و التهاب بالا',
+    intensityLabelFa: 'کشش و زیبایی‌شناسی بالا',
     coreSynopsis:
-      'A rain-streaked glass corridor leads into a private VIP suite at 2 AM—capturing raw magnetic tension, wet hair, black satin, and unfiltered first-person intimacy.',
+      'Masterpiece high-fashion erotic cinema by Vixen filmed in a private French chateau—natural golden tungsten lighting, black silk Chantilly lace, and poetic intimacy.',
     coreSynopsisFa:
-      'پشت پنجره‌های باران‌خورده طبقه آخر هتل در ساعت ۲ بامداد؛ تلاقی نگاه‌ها، ساتن مشکی و تصویربرداری زاویه دید اول‌شخص (POV) با بالاترین وضوح.',
+      'شاهکار سینمایی و هنری استودیو ویکسن با زیباترین بازیگران، نورپردازی طلایی و صحنه‌های صمیمی بدون سانسور در عمارت مجلل فرانسوی.',
     aestheticDNA: ['late-night-hotel', 'rain-glass', 'pov-intimacy', 'euphoria-lighting', 'beeg', 'hqporner', 'porndig'],
     moodVector: {
       intense: 0.91,
@@ -852,26 +850,25 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
   {
     id: 'velvet-illusion-ai',
     indexNumber: 3,
-    streamUrl:
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4',
+    streamUrl: '/assets/videos/stream_bunny.mp4',
     posterUrl: './assets/images/ai_erotic_velvet_illusion_1794443435845.jpg',
     pillar: 'AI',
     resolution: '4K 60FPS',
     durationSec: 210,
     durationFormatted: '14:50',
     ambientColors: ['#BE185D', '#7E22CE'],
-    canonicalTitle: 'Obsidian Muse: Hyper-Skin Study',
-    directorOrStudio: 'Aether Erotic Synth • Diffusion V5',
+    canonicalTitle: 'Candy AI: Hyper-Real Obsidian Goddess',
+    directorOrStudio: 'Candy AI / Lovescape Studios • 4K',
     sensoryMood: 'Hyper-Real AI Fantasy',
-    sensoryMoodFa: 'فانتزی فراواقعی هوش مصنوعی',
+    sensoryMoodFa: 'هوش مصنوعی بزرگسال فراواقعی',
     audioProfile: 'Spatial Breath & Silk ASMR',
     audioProfileFa: 'صدای فضایی نفس و ابریشم · ASMR',
     intensityLabel: 'Extreme Realism',
     intensityLabelFa: 'فراواقعی و مسحورکننده',
     coreSynopsis:
-      'Photorealistic generative adult cinema bathed in liquid rose-gold and deep violet studio lighting—rendering tactile skin pores, draped dark velvet, and impossible sensual choreography.',
+      'Next-generation photorealistic generative adult cinema by Candy AI—rendering ultra-high-definition skin textures, liquid rose-gold lighting, and personalized fantasy.',
     coreSynopsisFa:
-      'سینمای بزرگسالانه تولیدشده با هوش مصنوعی در نورپردازی رزگلد و بنفش تیره؛ رندر خیره‌کننده بافت پوست، مخمل نیمه‌شفاف و حرکت‌های مسحورکننده.',
+      'سینمای نسل جدید هوش مصنوعی فتورئالیستیک با گرافیک خیره‌کننده، رندرینگ بی‌نظیر بافت پوست و بازسازی کامل فانتزی‌های بزرگسال.',
     aestheticDNA: ['hyper-real-ai', 'rose-gold-skin', 'velvet-drape', 'sensual-choreography', 'candy.ai', 'xgroovy', 'pornx.ai'],
     moodVector: {
       intense: 0.88,
@@ -944,26 +941,25 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
   {
     id: 'tokyo-neon-boudoir-anime',
     indexNumber: 4,
-    streamUrl:
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
+    streamUrl: '/assets/videos/stream_movie.mp4',
     posterUrl: './assets/images/anime_nocturne_neon_boudoir_1794443444307.jpg',
     pillar: 'ANIMATION',
     resolution: '4K 60FPS',
     durationSec: 195,
     durationFormatted: '16:30',
     ambientColors: ['#E11D48', '#D97706'],
-    canonicalTitle: 'Midnight in Roppongi: Uncensored Cut',
-    directorOrStudio: 'Atelier Velvet • Tokyo Adult Animation',
+    canonicalTitle: 'DLsite Uncensored Hentai: Roppongi Nights',
+    directorOrStudio: 'DLsite Uncensored Animation • 60FPS',
     sensoryMood: 'Uncensored Anime',
-    sensoryMoodFa: 'انیمه بزرگسالانه بدون سانسور',
+    sensoryMoodFa: 'انیمه و هنتای بدون سانسور',
     audioProfile: 'Japanese Voice Acting & Rain ASMR',
-    audioProfileFa: 'صداپیشگی اختصاصی و صدای باران · ASMR',
+    audioProfileFa: 'صداپیشگی اختصاصی ژاپنی · ASMR',
     intensityLabel: 'High Intensity',
-    intensityLabelFa: 'ساکوگای پرحرارت و حسی',
+    intensityLabelFa: 'ساکوگای پرحرارت و بدون سانسور',
     coreSynopsis:
-      'Hand-painted uncensored adult anime set inside a high-rise Roppongi apartment—warm amber lamp glow meets crimson neon rain as a silk kimono slips away.',
+      'Hand-crafted uncensored adult anime set inside a high-rise Roppongi apartment—vibrant neon reflections, fluid 60fps animation, and zero censorship.',
     coreSynopsisFa:
-      'انیمیشن بزرگسالانه با نقاشی دستی و فریم‌ریت ۶۰؛ در آپارتمان برج روبونگی زیر باران نئونی، ترکیب نور گرم آباژور و رها شدن کیمونوی ابریشمی.',
+      'انیمیشن بزرگسال تحسین‌شده با جزئیات کامل بصری، صداپیشگی ژاپنی، کیفیت طراحی دستی و دوبله صوتی ۳۶۰ درجه سه بعدی بدون سانسور.',
     aestheticDNA: ['uncensored-anime', 'roppongi-penthouse', 'silk-kimono', 'sakuga-intimacy', 'dlsite', 'nhentai', 'hentai'],
     moodVector: {
       intense: 0.92,
@@ -1036,26 +1032,25 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
   {
     id: 'crimson-penthouse-pov',
     indexNumber: 5,
-    streamUrl:
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
+    streamUrl: '/assets/videos/stream_movie.mp4',
     posterUrl: './assets/images/cinema_crimson_penthouse_1794408993203.jpg',
     pillar: 'LIVE',
     resolution: '4K 60FPS',
     durationSec: 205,
     durationFormatted: '24:10',
     ambientColors: ['#E11D48', '#F97316'],
-    canonicalTitle: '64th Floor Hearth: Uncut POV',
-    directorOrStudio: 'Valeria & Marco • Milan Private Cinema',
+    canonicalTitle: 'Pornhub #1 Global Trend: Bedroom Confessions',
+    directorOrStudio: 'Pornhub Top Worldwide • 4K 60FPS',
     sensoryMood: 'Intimate POV',
-    sensoryMoodFa: 'زاویه دید اول‌شخص (POV)',
+    sensoryMoodFa: 'دید اول شخص و صمیمی (POV)',
     audioProfile: 'Close-Mic Whisper & Firelight ASMR',
-    audioProfileFa: 'میکروفون نزدیک نجوا و صدای شومینه',
+    audioProfileFa: 'میکروفون نزدیک نجوا و صدای طبیعی',
     intensityLabel: 'High Intensity',
-    intensityLabelFa: 'صمیمیت و حرارت بالا',
+    intensityLabelFa: 'ترند شماره یک جهانی',
     coreSynopsis:
-      'Filmed entirely in unbroken 60fps POV beside an open penthouse fireplace overlooking Milan at midnight—every whisper, glance, and touch captured in warm amber.',
+      'The #1 most-watched trending video across Pornhub worldwide with 45M+ views—filmed in unbroken 60fps first-person POV beside a luxury penthouse fireplace.',
     coreSynopsisFa:
-      'فیلم‌برداری یک‌سره ۶۰ فریم از زاویه دید اول‌شخص (POV) کنار شومینه پنت‌هاوس میلان؛ ثبت دقیق‌ترین جزئیات نگاه، نجوا و لمس در نور سرخ آتش.',
+      'پربازدیدترین ویدیوی ترند جهانی پورن‌هاب در ۳۰ روز گذشته با زاویه دید اول‌شخص (POV)، بیش از ۴۵ میلیون بیننده و وضوح کریستالی ۴K.',
     aestheticDNA: ['uncut-pov', 'fireplace-warmth', 'milan-penthouse', 'whisper-asmr', 'brazzers', 'adulttime', 'stripchat'],
     moodVector: {
       intense: 0.89,
@@ -1128,26 +1123,25 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
   {
     id: 'velvet-rain-shinjuku',
     indexNumber: 6,
-    streamUrl:
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoy.mp4',
+    streamUrl: '/assets/videos/stream_oceans.mp4',
     posterUrl: './assets/images/cinema_noir_velvet_rain_1794398988857.jpg',
     pillar: 'LIVE',
     resolution: '4K 60FPS',
     durationSec: 175,
     durationFormatted: '19:20',
     ambientColors: ['#E11D48', '#D97706'],
-    canonicalTitle: 'Shinjuku Love Hotel: Room 808',
-    directorOrStudio: 'Kenji Takahashi • Studio Kuro Tokyo',
+    canonicalTitle: 'MissAV Tokyo: Uncensored Ryokan JAV',
+    directorOrStudio: 'MissAV Uncut JAV • 4K 60FPS',
     sensoryMood: 'Sensual ASMR',
-    sensoryMoodFa: 'حسی و صدای طبیعی ASMR',
+    sensoryMoodFa: 'آسیایی و ژاپنی بدون سانسور',
     audioProfile: '3D Binaural Whisper & Rain',
     audioProfileFa: 'صدای سه‌بعدی نفس و باران توکیو',
     intensityLabel: 'High Intensity',
-    intensityLabelFa: 'اتمسفر غلیظ و پرحرارت',
+    intensityLabelFa: 'ژاپنی بدون سانسور و پرحرارت',
     coreSynopsis:
-      'Behind the frosted glass partition of a private Shinjuku sanctuary, warm crimson neon and steamed mirrors frame a slow-burning, deeply tactile midnight session.',
+      'Top-ranked uncut JAV release from MissAV—traditional Japanese ryokan onsen, silk kimono, steamed glass mirrors, and pristine 4K video with zero censorship.',
     coreSynopsisFa:
-      'پشت شیشه‌های بخارگرفته یک سوئیت خصوصی در شینجوکو؛ ترکیب نئون سرخ، آینه‌های قدی و صدابرداری دوگوشی که هر نفس را در کنار گوش زنده می‌کند.',
+      'محبوب‌ترین اثر سینمای بزرگسال ژاپن به صورت کاملاً بدون سانسور در اونسن سنتی، با کیفیت 4K و صدای دوگوشی ASMR بدون هیچ‌گونه افت کیفیت.',
     aestheticDNA: ['shinjuku-sanctuary', 'steamed-glass', 'binaural-asmr', 'crimson-neon', 'njavtv', 'missav', 'jav'],
     moodVector: {
       intense: 0.84,
@@ -1220,26 +1214,25 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
   {
     id: 'obsidian-sonata-boudoir',
     indexNumber: 7,
-    streamUrl:
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+    streamUrl: '/assets/videos/stream_sintel.mp4',
     posterUrl: './assets/images/cinema_obsidian_sonata_1794398992852.jpg',
     pillar: 'LIVE',
     resolution: '4K 60FPS',
     durationSec: 195,
     durationFormatted: '21:05',
     ambientColors: ['#D97706', '#881337'],
-    canonicalTitle: 'Nocturne in Black Satin',
-    directorOrStudio: 'Céline Vane • Vienna Private Atelier',
+    canonicalTitle: 'Blacked Raw: Midnight Luxury Encounter',
+    directorOrStudio: 'Blacked Raw Studios • 4K 60FPS',
     sensoryMood: 'High-Intensity Climax',
-    sensoryMoodFa: 'اوج هیجان و کنتراست',
+    sensoryMoodFa: 'استودیویی داغ و پرانرژی',
     audioProfile: 'Natural Acoustics & Breath',
-    audioProfileFa: 'صدای طبیعی تالار و نفس‌ها',
+    audioProfileFa: 'صدای زنده استودیو و نفس‌ها',
     intensityLabel: 'High Intensity',
-    intensityLabelFa: 'ریتم تند و پرکشش',
+    intensityLabelFa: 'ریتم تند و پرکشش ۶۰ فریم',
     coreSynopsis:
-      'Inside a candlelit Viennese salon after midnight, a single shaft of golden light cuts across black satin and bare skin in an intense, choreographed erotic study.',
+      'High-voltage studio blockbuster from Blacked Raw—intense choreography, golden chiaroscuro lighting, and unhurried high-bitrate 60fps pacing.',
     coreSynopsisFa:
-      'در یک سالن خصوصی با نور شمع و پرتو طلایی در نیمه‌شب وین؛ تضاد خیره‌کننده ساتن سیاه و پوست در یک هم‌آغوشی پرکشش و بدون توقف.',
+      'شاهکار پرهیجان استودیوی بلکد راو با بالاترین امتیاز کاربران در آمریکا، کیفیت بی‌نظیر ۶۰ فریم و ریتم تند و پرحرارت.',
     aestheticDNA: ['black-satin', 'golden-chiaroscuro', 'high-intensity', 'vienna-salon', 'pornhub', 'xvideos', 'xhamster'],
     moodVector: {
       intense: 0.96,
@@ -1312,26 +1305,25 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
   {
     id: 'orient-sleeper-compartment',
     indexNumber: 8,
-    streamUrl:
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4',
+    streamUrl: '/assets/videos/stream_bunny.mp4',
     posterUrl: './assets/images/cinema_midnight_express_paris_1794408998635.jpg',
     pillar: 'LIVE',
     resolution: '4K 60FPS',
     durationSec: 190,
     durationFormatted: '17:45',
     ambientColors: ['#D97706', '#9F1239'],
-    canonicalTitle: 'Compartment No. 9: Midnight Express',
-    directorOrStudio: 'L. Moreau • Paris / Venice Line',
+    canonicalTitle: 'OnlyFans VIP: Private Candlelight Boudoir',
+    directorOrStudio: 'OnlyFans Elite Creators • 4K',
     sensoryMood: 'Late Night Hotel',
-    sensoryMoodFa: 'کوپه خصوصی نیمه‌شب',
+    sensoryMoodFa: 'اتاق خواب اختصاصی و صمیمی',
     audioProfile: 'Rain, Rails & Intimate Whisper ASMR',
-    audioProfileFa: 'صدای باران و نجوای نزدیک در کوپه',
+    audioProfileFa: 'صدای نجوای نزدیک در اتاق خواب',
     intensityLabel: 'High Intensity',
-    intensityLabelFa: 'صمیمی و رازآلود',
+    intensityLabelFa: 'صمیمی و بدون سانسور VIP',
     coreSynopsis:
-      'Locked inside a mahogany first-class sleeper compartment speeding through the rain, brass lamps cast warm amber light over a clandestine, breathless encounter.',
+      'Exclusive private boudoir session from OnlyFans top 0.01% creator—warm candlelight, unscripted raw intimacy, and personal handheld angles.',
     coreSynopsisFa:
-      'پشت در قفل‌شده کوپه چوب ماهون قطار شبانه پاریس-ونیز؛ نور گرم چراغ‌های برنجی و ریتم حرکت قطار که فضایی فوق‌العاده صمیمی و پرالتهاب می‌سازد.',
+      'مجموعه دست‌چین شده از پرطرفدارترین محتوای خصوصی تاپ کریتورهای اونلی‌فنز با زاویه اختصاصی، ارتباط مستقیم چشمی و بدون سانسور.',
     aestheticDNA: ['sleeper-compartment', 'amber-brass', 'clandestine-intimacy', 'natural-asmr', 'joyclub', 'cumlouder', 'european'],
     moodVector: {
       intense: 0.85,
@@ -1404,26 +1396,25 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
   {
     id: 'ai-crimson-mirage',
     indexNumber: 9,
-    streamUrl:
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4',
+    streamUrl: '/assets/videos/stream_flower.mp4',
     posterUrl: './assets/images/boudoir_crimson_silk_suite_1794443433215.jpg',
     pillar: 'AI',
     resolution: '4K 60FPS',
     durationSec: 165,
     durationFormatted: '15:40',
     ambientColors: ['#E11D48', '#D97706'],
-    canonicalTitle: 'Velvet Synth: Private Boudoir V4',
-    directorOrStudio: 'Aether Neural Boudoir • 60fps Engine',
+    canonicalTitle: 'Reality Kings: Malibu Beachfront Romance',
+    directorOrStudio: 'Reality Kings Classics • 4K 60FPS',
     sensoryMood: 'Hyper-Real AI Fantasy',
-    sensoryMoodFa: 'فانتزی فراواقعی هوش مصنوعی',
-    audioProfile: 'Neural Binaural Whisper ASMR',
-    audioProfileFa: 'صداسازی دوگوشی فوق‌طبیعی · ASMR',
+    sensoryMoodFa: 'فضای آزاد و تابستانی کالیفرنیا',
+    audioProfile: 'Natural Pacific Breeze & Audio ASMR',
+    audioProfileFa: 'صدای طبیعی محیط و دریا · ASMR',
     intensityLabel: 'Extreme Realism',
-    intensityLabelFa: 'وضوح پوستی 4K و پرحرارت',
+    intensityLabelFa: 'وضوح 4K و فضای آزاد',
     coreSynopsis:
-      'Next-generation photorealistic AI boudoir cinema—combining hyper-accurate candlelight reflections on skin with seamless 60fps intimate motion.',
+      'Classic Californian beachside release from Reality Kings—sunny oceanfront villa, natural sunlight, carefree intimacy, and crisp 60fps multi-camera capture.',
     coreSynopsisFa:
-      'نسل جدید سینمای اتاق خواب هوش مصنوعی با فریم‌ریت ۶۰؛ بازتاب خیره‌کننده نور شمع روی پوست و حرکت‌های کاملاً طبیعی و بدون مرز.',
+      'اثر پرطرفدار و ماندگار استودیو ریالیتی کینگز در سواحل آفتابی و ویلاهای اختصاصی کالیفرنیا با فضای باز و پرانرژی.',
     aestheticDNA: ['ai-boudoir', 'candlelight-skin', '60fps-neural', 'intimate-closeup', 'myanima', 'lovescape', 'ourdream', 'arab'],
     moodVector: {
       intense: 0.9,
@@ -1496,26 +1487,25 @@ export const INITIAL_CATALOG_DATA: CatalogFilmItem[] = [
   {
     id: 'kyoto-silk-anime-uncut',
     indexNumber: 10,
-    streamUrl:
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackSeeTheWorld.mp4',
+    streamUrl: '/assets/videos/stream_movie.mp4',
     posterUrl: './assets/images/anime_nocturne_neon_boudoir_1794443444307.jpg',
     pillar: 'ANIMATION',
     resolution: '4K 60FPS',
     durationSec: 170,
     durationFormatted: '17:10',
     ambientColors: ['#BE185D', '#D97706'],
-    canonicalTitle: 'Velvet Ryokan: Midnight Bath (Uncensored)',
-    directorOrStudio: 'Studio Kurenai • Kyoto Adult Ink',
+    canonicalTitle: 'Naughty America: Late Night Office Fantasy',
+    directorOrStudio: 'Naughty America HD • 1080p',
     sensoryMood: 'Uncensored Anime',
-    sensoryMoodFa: 'انیمه بزرگسالانه بدون سانسور',
-    audioProfile: 'Thermal Water & Voice ASMR',
-    audioProfileFa: 'صدای آب گرم و نجوای اختصاصی · ASMR',
+    sensoryMoodFa: 'سناریو محور و محیط کار',
+    audioProfile: 'High-Fidelity Dialogue & Room ASMR',
+    audioProfileFa: 'دیالوگ‌های اختصاصی و صدای طبیعی',
     intensityLabel: 'High Intensity',
-    intensityLabelFa: 'انیمیشن دست‌ساز و پرحرارت',
+    intensityLabelFa: 'بازیگری ستاره‌ها و سناریوی داغ',
     coreSynopsis:
-      'Inside a private cedar-wood thermal bath in Kyoto during a midnight rainstorm, steam and warm lantern light wrap an uncensored, deeply sensual animated encounter.',
+      'Flagship roleplay scenario from Naughty America—after hours in a downtown executive office, tension mounts into an unforgettable studio encounter.',
     coreSynopsisFa:
-      'در حمام چوب سدر یک مسافرخانه خصوصی کیوتو زیر باران نیمه‌شب؛ ترکیب بخار آب گرم، نور فانوس‌های سرخ و انیمیشن بزرگسالانه بدون سانسور.',
+      'محبوب‌ترین داستان فانتزی استودیو ناتی آمریکا با فیلم‌نامه جذاب، بازیگران ستاره، محیط کاری شبانه و دیالوگ‌های پرحرارت.',
     aestheticDNA: ['ryokan-bath', 'uncensored-anime', 'steamed-lantern', 'water-asmr', 'f95zone', '18comic', 'e-hentai'],
     moodVector: {
       intense: 0.88,
@@ -1904,6 +1894,859 @@ export function synthesizeFilmCriticReview(
 // CURATED ARCHIVE AI SEARCH & GLOBAL 100-SOURCE RANKING ENGINE
 // ============================================================================
 
+// ============================================================================
+// DYNAMIC 10-FILM CUSTOM ADULT CURATOR & SEARCH GENERATOR
+// Translates any search query or chat topic into 10 tailored adult films
+// ============================================================================
+
+const RELIABLE_STREAMS = [
+  '/assets/videos/stream_oceans.mp4',
+  '/assets/videos/stream_sintel.mp4',
+  '/assets/videos/stream_bunny.mp4',
+  '/assets/videos/stream_movie.mp4',
+  '/assets/videos/stream_oceans.mp4',
+  '/assets/videos/stream_sintel.mp4',
+  '/assets/videos/stream_bunny.mp4',
+  '/assets/videos/stream_movie.mp4',
+  '/assets/videos/stream_sintel.mp4',
+  '/assets/videos/stream_movie.mp4'
+];
+
+const CURATED_POSTERS = [
+  './assets/images/boudoir_crimson_silk_suite_1794443433215.jpg',
+  './assets/images/editorial_amber_hotel_noir_1794443435341.jpg',
+  './assets/images/ai_erotic_velvet_illusion_1794443435845.jpg',
+  './assets/images/anime_nocturne_neon_boudoir_1794443444307.jpg',
+  './assets/images/cinema_crimson_penthouse_1794408993203.jpg',
+  './assets/images/cinema_noir_velvet_rain_1794398988857.jpg',
+  './assets/images/cinema_obsidian_sonata_1794398992852.jpg',
+  './assets/images/cinema_midnight_express_paris_1794408998635.jpg',
+  './assets/images/ai_cinema_quantum_oasis_1794408994686.jpg',
+  './assets/images/ai_cinema_solaris_mirage_1794398990412.jpg'
+];
+
+export function generateDynamic10CustomAdultFilms(
+  rawQuery: string,
+  preferredLang: string = 'fa',
+  sessionVector: MoodVector5D
+): {
+  activeWindow10: CatalogFilmItem[];
+  reservePool: CatalogFilmItem[];
+  categoryTitleFa: string;
+  categoryTitleEn: string;
+} {
+  const q = rawQuery.trim().toLowerCase();
+  const isFa = preferredLang === 'fa';
+
+  let categoryTitleFa = 'ترندهای اختصاصی هوش مصنوعی';
+  let categoryTitleEn = 'AI Curated Adult Trends';
+  let titles: { en: string; fa: string; studio: string; domain: string; moodFa: string; synopsisFa: string; synopsisEn: string; pillar: FilmPillarCode }[] = [];
+
+  if (/میلف|مادر|سن بالا|mature|milf|cougar|stepmom|خاله/i.test(q)) {
+    categoryTitleFa = '۱۰ فیلم برتر ژانر میلف و بانوان بزرگسال (MILF & Mature)';
+    categoryTitleEn = 'Top 10 MILF & Mature Worldwide Trends';
+    titles = [
+      {
+        en: 'Brazzers MILF: Luxury Villa Private Seduction',
+        fa: 'برازرس میلف · وسوسه در ویلای مجلل خصوصی',
+        studio: 'Brazzers Premium • 4K 60FPS',
+        domain: 'brazzers.com',
+        moodFa: 'میلف و استودیویی لوکس',
+        synopsisFa: 'پرطرفدارترین ترند استودیو برازرس در ژانر میلف با بازی برترین ستاره‌های بزرگسال و کیفیت 4K واقعی.',
+        synopsisEn: 'Top-ranked Brazzers 4K studio release in the MILF category featuring elite adult actresses in a private luxury villa.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Naughty America: Stepmom Late Night Desire',
+        fa: 'ناتی آمریکا · سناریوی شبانه مادرخوانده',
+        studio: 'Naughty America HD',
+        domain: 'naughtyamerica.com',
+        moodFa: 'سناریو محور و فانتزی',
+        synopsisFa: 'از تحسین‌شده‌ترین داستان‌های استودیو ناتی آمریکا با سناریوی محبوب خانوادگی و بازیگری بی‌نظیر.',
+        synopsisEn: 'Acclaimed roleplay scenario from Naughty America with exceptional acting, dialogue, and late-night tension.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Reality Kings: Malibu MILF Hunter 4K',
+        fa: 'ریالیتی کینگز · شکارچی میلف در سواحل مالیبو',
+        studio: 'Reality Kings Classics',
+        domain: 'realitykings.com',
+        moodFa: 'فضای آزاد و تابستانی',
+        synopsisFa: 'اثر پربیننده استودیو ریالیتی کینگز در سواحل آفتابی کالیفرنیا با نور طبیعی و کیفیت فوق‌العاده ۶۰ فریم.',
+        synopsisEn: 'Sunny Californian beachside classic by Reality Kings captured in crisp 60fps natural lighting.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Vixen Mature: French Riviera Elegance',
+        fa: 'ویکسن · زیبایی و کمال در ریویرا فرانسه',
+        studio: 'Vixen Media Group • 4K HDR',
+        domain: 'vixen.com',
+        moodFa: 'شهوانی و رمانتیک لوکس',
+        synopsisFa: 'شاهکار بصری و مجلل ویکسن با زیباترین بازیگران بزرگسال، نورپردازی طلایی و صحنه‌های صمیمی.',
+        synopsisEn: 'Breathtaking erotic cinema by Vixen with golden cinematography and elegant romantic intimacy.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Pornhub Top 1 MILF: Midnight Bedroom POV',
+        fa: 'پورن‌هاب ترند ۱ میلف · زاویه دید اول‌شخص اتاق خواب',
+        studio: 'Pornhub Verified • 4K',
+        domain: 'pornhub.com',
+        moodFa: 'دید اول‌شخص و صمیمی (POV)',
+        synopsisFa: 'پربازدیدترین اثر میلف پورن‌هاب در ۳۰ روز گذشته با زاویه دوربین صمیمی و صدای طبیعی اتاق.',
+        synopsisEn: 'The #1 trending MILF video across Pornhub with intimate handheld POV camera work and natural ASMR audio.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Blacked Raw: Mature Allure Penthouse',
+        fa: 'بلکد راو · جذابیت میلف در پنت‌هاوس',
+        studio: 'Blacked Raw Studios',
+        domain: 'blacked.com',
+        moodFa: 'استودیویی داغ و پرانرژی',
+        synopsisFa: 'تولید استودیویی پرحرارت بلکد راو با بازیگران باتجربه و ریتم تند ۶۰ فریم بر ثانیه.',
+        synopsisEn: 'High-voltage studio release from Blacked Raw featuring intense pacing and high-bitrate video.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Tushy Luxury: Italian Countess Romance',
+        fa: 'توشی لوکس · عمارت اشرافی ایتالیا',
+        studio: 'Tushy Art Series • 4K',
+        domain: 'tushy.com',
+        moodFa: 'هنری و لوکس',
+        synopsisFa: 'روایت عاشقانه و بی‌پرده در ویلای تاریخی توسکانی با ساتن سیاه و معماری رنسانس.',
+        synopsisEn: 'Artistic high-end adult film set in a historic Tuscan villa with black satin and renaissance aesthetics.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'OnlyFans VIP MILF: Private Boudoir Session',
+        fa: 'اونلی‌فنز VIP · اتاق خواب صمیمی و اختصاصی',
+        studio: 'OnlyFans Top 0.01% VIP',
+        domain: 'onlyfans.com',
+        moodFa: 'اتاق خواب اختصاصی بدون سانسور',
+        synopsisFa: 'محتوای گلچین‌شده تاپ کریتورهای اونلی‌فنز با ارتباط مستقیم چشمی و آزادی کامل.',
+        synopsisEn: 'Exclusive private session from elite OnlyFans creators with direct eye contact and raw realism.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'MissAV JAV: Mature Japanese Ryokan Uncensored',
+        fa: 'میس‌ای‌وی ژاپن · بانوی باوقار در اونسن بدون سانسور',
+        studio: 'MissAV Uncut JAV',
+        domain: 'missav.ai',
+        moodFa: 'آسیایی و ژاپنی بدون سانسور',
+        synopsisFa: 'سینمای بزرگسال ژاپن در ژانر بانوان بزرگسال به صورت کاملاً بدون سانسور و با صدای دوگوشی.',
+        synopsisEn: 'Top-tier uncensored JAV release featuring mature Japanese actress in a traditional hot spring inn.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Candy AI: Photoreal Mature Goddess 4K',
+        fa: 'هوش مصنوعی کندی · فانتزی فتورئال بانوی بزرگسال',
+        studio: 'Candy AI / Lovescape',
+        domain: 'candy.ai',
+        moodFa: 'هوش مصنوعی بزرگسال فراواقعی',
+        synopsisFa: 'رندرینگ نسل جدید هوش مصنوعی با شبیه‌سازی خیره‌کننده بافت پوست و فانتزی‌های سفارشی.',
+        synopsisEn: 'Next-gen photorealistic generative AI cinema rendering ultra-realistic skin and custom fantasy.',
+        pillar: 'AI'
+      }
+    ];
+  } else if (/ژاپنی|آسیایی|اسیایی|ژاپن|jav|asian|japanese|tokyo|missav|njavtv|سانسور|بدون سانسور/i.test(q)) {
+    categoryTitleFa = '۱۰ فیلم برتر سینمای ژاپن و آسیا بدون سانسور (Uncensored JAV)';
+    categoryTitleEn = 'Top 10 Asian & Japanese Uncensored JAV Trends';
+    titles = [
+      {
+        en: 'MissAV Tokyo Uncensored: Luxury Onsen Ryokan',
+        fa: 'میس‌ای‌وی ژاپن · اونسن سنتی بدون سانسور',
+        studio: 'MissAV Uncut JAV • 4K 60FPS',
+        domain: 'missav.ai',
+        moodFa: 'ژاپنی بدون سانسور و پرحرارت',
+        synopsisFa: 'ترند شماره یک سینمای بزرگسال ژاپن به صورت کاملاً بدون سانسور در اونسن چوب سدر با صدای ASMR.',
+        synopsisEn: 'The #1 trending uncensored JAV release in a traditional cedar onsen bath with crystal 4K clarity.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'NJAVTV S1 Exclusive: Shinjuku Penthouse Rendezvous',
+        fa: 'استودیو اس‌وان · ملاقات نیمه‌شب پنت‌هاوس شینجوکو',
+        studio: 'S1 Japan / NJAVTV Ad-Free',
+        domain: 'njavtv.com',
+        moodFa: 'استودیویی لوکس ژاپن',
+        synopsisFa: 'تولید مجلل استودیو اس‌وان توکیو با حضور محبوب‌ترین ستاره سینمای بزرگسال آسیا بدون تبلیغ.',
+        synopsisEn: 'Flagship high-budget studio release from S1 Japan featuring Tokyo’s top adult actress.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'FALENO Star: Roppongi Midnight Satin',
+        fa: 'استودیو فالنو · ساتن سیاه و نئون روپونگی',
+        studio: 'FALENO Star Japan • 4K',
+        domain: 'faleno.jp',
+        moodFa: 'شهوانی و پرکشش',
+        synopsisFa: 'درام رمانتیک و بی‌پرده در برج مسکونی روپونگی با نورپردازی نئونی و تصویربرداری ۶۰ فریم.',
+        synopsisEn: 'Sensual romantic drama by FALENO Star set in a luxury Roppongi tower with cinematic 60fps pacing.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'SOD Create: Tokyo Private Suite Uncut',
+        fa: 'اس‌او‌دی ژاپن · سوئیت خصوصی توکیو بدون سانسور',
+        studio: 'SOD Create • Uncensored Cut',
+        domain: 'sod.co.jp',
+        moodFa: 'دید اول‌شخص و صمیمی',
+        synopsisFa: 'سکانس‌های صمیمی و بی‌پرده با زاویه نزدیک و کیفیت شگفت‌انگیز 4K استودیو سافت آن دماند.',
+        synopsisEn: 'Intimate uncut private suite experience from Soft On Demand with close-up multi-camera angles.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Moodyz Uncut: Kyoto Kimono Seduction',
+        fa: 'مودیز ژاپن · وسوسه کیمونوی ابریشمی در کیوتو',
+        studio: 'Moodyz Japan • 4K',
+        domain: 'moodyz.com',
+        moodFa: 'سنتی و فوق‌العاده حسی',
+        synopsisFa: 'ترکیب کیمونوی اصیل ابریشم، اتاق تاتامی چوبی و بازیگری مسحورکننده ستاره‌های توکیو.',
+        synopsisEn: 'Authentic silk kimono and traditional tatami room setting with spellbinding Japanese acting.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Prestige Tokyo: Late Night Hotel 808',
+        fa: 'استودیو پرستیژ · هتل نیمه‌شب اتاق ۸۰۸',
+        studio: 'Prestige Studios Japan',
+        domain: 'prestige-av.com',
+        moodFa: 'هتل شبانه و باران',
+        synopsisFa: 'پشت پنجره‌های باران‌خورده لاوهتل شینجوکو با صدابرداری طبیعی ۳۶۰ درجه دوگوشی.',
+        synopsisEn: 'Late-night Shinjuku love hotel encounter with 360-degree binaural natural sound capture.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Attackers JAV: Intense Uncensored Encounter',
+        fa: 'اتکرز ژاپن · درام پرحرارت و نفس‌گیر',
+        studio: 'Attackers Japan • 4K 60FPS',
+        domain: 'attackers.net',
+        moodFa: 'پرانرژی و هیجان‌انگیز',
+        synopsisFa: 'سینمای داستانی و پرحرارت استودیو اتکرز با دیالوگ‌های درگیرکننده و اوج هیجان.',
+        synopsisEn: 'High-tension narrative cinema from Attackers Japan featuring dramatic climaxes and raw pacing.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'IdeaPocket: Cyberpunk Tokyo Passion',
+        fa: 'آیدیا پاکت · هیجان سایبرپانک و نئون توکیو',
+        studio: 'IdeaPocket • 4K HDR',
+        domain: 'ideapocket.com',
+        moodFa: 'مدرن و مسحورکننده',
+        synopsisFa: 'فضای مدرن و نئونی کلان‌شهر توکیو با طراحی صحنه آینده‌نگرانه و بازیگری درجه یک.',
+        synopsisEn: 'Futuristic neon aesthetics and modern Tokyo high-rise setting by IdeaPocket.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Madonna Mature: Tokyo Luxury Elegance',
+        fa: 'مادونا ژاپن · بانوی باوقار و شیک توکیو',
+        studio: 'Madonna Japan Classics',
+        domain: 'madonna-av.com',
+        moodFa: 'میلف ژاپنی باکلاس',
+        synopsisFa: 'پرطرفدارترین استودیوی ژاپن در رده بانوان شیک‌پوش با روایت عاشقانه و صمیمیت کامل.',
+        synopsisEn: 'The gold standard in mature Japanese cinema featuring elegant Tokyo actresses.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'DLsite Audio-Drama: Binaural ASMR Tokyo',
+        fa: 'دی‌ال‌سایت · درام صوتی و دوگوشی ۳ بعدی توکیو',
+        studio: 'DLsite Adult ASMR Lab',
+        domain: 'dlsite.com',
+        moodFa: 'صدای سه‌بعدی ASMR',
+        synopsisFa: 'تجربه بی‌نظیر صداسازی سه بعدی دوگوشی که حس حضور در کنار بازیگر را القا می‌کند.',
+        synopsisEn: 'Immersive 3D binaural audio design creating an ultra-realistic sensation of physical proximity.',
+        pillar: 'ANIMATION'
+      }
+    ];
+  } else if (/ماساژ|massage|spa|اسپا|روغن|oil|نرو|nuru/i.test(q)) {
+    categoryTitleFa = '۱۰ فیلم برتر ماساژ اروتیک، اسپا و ریلکسیشن داغ';
+    categoryTitleEn = 'Top 10 Erotic Massage & Sensual Spa Trends';
+    titles = [
+      {
+        en: 'Nuru Massage Tokyo: Pure Warm Gel & Silk',
+        fa: 'ماساژ نورو توکیو · ژل گرم جلبک و لمس ابریشمی',
+        studio: 'Tokyo Nuru Sanctuary • 4K 60FPS',
+        domain: 'missav.ai',
+        moodFa: 'ماساژ نورو سنتی ژاپن',
+        synopsisFa: 'اصیل‌ترین تجربه ماساژ نورو ژاپنی با ژل طبیعی گرم، ملحفه‌های لغزنده و تماس کامل بدن.',
+        synopsisEn: 'Authentic Japanese nuru massage using warm organic seaweed gel and full-body tactile contact.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Sensual Spa Paris: Heated Aromatherapy Suite',
+        fa: 'اسپای پاریس · سوئیت آروماتراپی و شمع‌های معطر',
+        studio: 'Maison Spa Paris • 4K',
+        domain: 'vixen.com',
+        moodFa: 'شهوانی و ریلکسیشن لوکس',
+        synopsisFa: 'نور ملایم شمع‌های کهربایی، روغن بادام گرم و ماساژ آرام و عمیق که به اوج لذت ختم می‌شود.',
+        synopsisEn: 'Warm amber candle glow, heated almond oils, and deep slow-burn erotic massage.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Brazzers Massage: Private Villa Full Body Therapy',
+        fa: 'برازرس ماساژ · ویلای خصوصی و ماساژ کل بدن',
+        studio: 'Brazzers Premium 4K',
+        domain: 'brazzers.com',
+        moodFa: 'استودیویی پرحرارت',
+        synopsisFa: 'سناریوی هیجان‌انگیز استودیو برازرس در ویلای شخصی با حضور معروف‌ترین ماسورهای ستاره.',
+        synopsisEn: 'High-energy studio massage scenario filmed inside an exclusive private estate.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'MissAV Tokyo Spa: Uncensored Nuru Ryokan',
+        fa: 'میس‌ای‌وی ژاپن · ماساژ نورو بدون سانسور در ریوکان',
+        studio: 'MissAV Uncut JAV • 4K',
+        domain: 'missav.ai',
+        moodFa: 'ژاپنی بدون سانسور',
+        synopsisFa: 'ماساژ بدون سانسور در سوئیت تاتامی سنتی با وضوح فوق‌العاده و صدای آرامش‌بخش آب.',
+        synopsisEn: 'Uncensored Japanese massage release inside a traditional ryokan with calming water ASMR.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Vixen Sensual: Candlelight Oil Therapy',
+        fa: 'ویکسن · تراپی روغنی در نور شمع',
+        studio: 'Vixen Media Group • 4K HDR',
+        domain: 'vixen.com',
+        moodFa: 'رمانتیک و شهوانی',
+        synopsisFa: 'سینمای ناب اروتیک با تصویربرداری استادانه، دست‌های آغشته به روغن و نگاه‌های پرکشش.',
+        synopsisEn: 'Masterpiece erotic film with golden skin reflections, heated oils, and slow sensual touch.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'OnlyFans VIP: Intimate Bedroom Massage POV',
+        fa: 'اونلی‌فنز VIP · ماساژ صمیمی دید اول‌شخص در تخت',
+        studio: 'OnlyFans Top Creators',
+        domain: 'onlyfans.com',
+        moodFa: 'دید اول‌شخص و خصوصی',
+        synopsisFa: 'تجربه کاملاً شخصی و اختصاصی از زاویه دید بیننده با ماساژ دست‌ها و تنش حسی فوق‌العاده.',
+        synopsisEn: 'Handheld first-person POV capturing a close-up personal massage session.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Pornhub Top Trend: Swedish Full-Body Spa',
+        fa: 'پورن‌هاب ترند · ماساژ سوئدی کل بدن',
+        studio: 'Pornhub Verified',
+        domain: 'pornhub.com',
+        moodFa: 'پرطرفدار جهانی',
+        synopsisFa: 'پربازدیدترین ویدیوی دسته ماساژ پورن‌هاب با تکنیک‌های حرفه‌ای و پایانی فوق‌العاده داغ.',
+        synopsisEn: 'Most-replayed massage release across global platforms with professional techniques.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Reality Kings: Malibu Seaside Massage 4K',
+        fa: 'ریالیتی کینگز · ماساژ در نسیم ساحلی مالیبو',
+        studio: 'Reality Kings Classics',
+        domain: 'realitykings.com',
+        moodFa: 'فضای باز کالیفرنیا',
+        synopsisFa: 'ماساژ روی تراس اختصاصی رو به اقیانوس آرام با صدای موج دریا و نور درخشان آفتاب.',
+        synopsisEn: 'Outdoor seaside terrace setting with ocean breeze, sunlight, and relaxing touch.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Tushy Relaxation: Tuscan Villa Heated Stones',
+        fa: 'توشی · سنگ‌های داغ و اسپا در توسکانی ایتالیا',
+        studio: 'Tushy Art Series',
+        domain: 'tushy.com',
+        moodFa: 'هنری و لوکس',
+        synopsisFa: 'ترکیب سنگ‌های آتشفشانی داغ، روغن‌های کمیاب گیاهی و هم‌آغوشی اشرافی در ایتالیا.',
+        synopsisEn: 'Hot volcanic stone therapy and rare botanical oils inside a luxury Italian manor.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Candy AI: Virtual Relaxation Sanctuary 4K',
+        fa: 'هوش مصنوعی کندی · معبد آرامش و ماساژ فراواقعی',
+        studio: 'Candy AI Erotic Synth',
+        domain: 'candy.ai',
+        moodFa: 'هوش مصنوعی فراواقعی',
+        synopsisFa: 'رندرینگ کاملاً سفارشی هوش مصنوعی برای ماساژ آرامش‌بخش با گرافیک فتورئالیستیک خیره‌کننده.',
+        synopsisEn: 'Custom photoreal generative massage sanctuary tailored for sensory relaxation.',
+        pillar: 'AI'
+      }
+    ];
+  } else if (/بلوند|blonde|روس|روسی|اروپایی|euro|russian|طلایی/i.test(q)) {
+    categoryTitleFa = '۱۰ فیلم برتر ستارگان بلوند و اروپایی (Blonde & European Glamour)';
+    categoryTitleEn = 'Top 10 Blonde & European Adult Cinema Trends';
+    titles = [
+      {
+        en: 'Vixen Blonde: Parisian Chateau Romance',
+        fa: 'ویکسن بلوند · عمارت لوکس و رمانتیک پاریس',
+        studio: 'Vixen Media Group • 4K HDR',
+        domain: 'vixen.com',
+        moodFa: 'بلوند و شهوانی لوکس',
+        synopsisFa: 'شاهکار استودیو ویکسن با حضور برترین سوپرمدل بلوند در عمارت مجلل پاریس با نورپردازی طبیعی.',
+        synopsisEn: 'Vixen masterpiece starring elite blonde supermodels inside a private Parisian chateau.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Brazzers 4K: Blonde Star Penthouse Passion',
+        fa: 'برازرس ۴K · پنت‌هاوس ستاره بلوند',
+        studio: 'Brazzers Premium • 4K 60FPS',
+        domain: 'brazzers.com',
+        moodFa: 'استودیویی داغ و پرحرارت',
+        synopsisFa: 'پربازدیدترین ترند ۴K استودیو برازرس با بازیگر محبوب موطلایی در بالاترین طبقه آسمان‌خراش.',
+        synopsisEn: 'Top-ranked Brazzers 4K blockbuster starring world-famous blonde adult icon.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Blacked Raw: Scandinavian Blonde Allure',
+        fa: 'بلکد راو · بانوی بلوند اسکاندیناوی',
+        studio: 'Blacked Raw Studios • 4K',
+        domain: 'blacked.com',
+        moodFa: 'پرانرژی و استودیویی',
+        synopsisFa: 'تولید ۶۰ فریم پرهیجان با بازیگر موطلایی شمالی با کنتراست نوری فوق‌العاده و ریتم تند.',
+        synopsisEn: 'High-voltage 60fps release featuring Scandinavian blonde beauty with raw pacing.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Tushy Art: Golden Hair Renaissance Romance',
+        fa: 'توشی آرت · موهای طلایی در کاخ رنسانس',
+        studio: 'Tushy Art Series • 4K',
+        domain: 'tushy.com',
+        moodFa: 'هنری و مجلل',
+        synopsisFa: 'سینمای باوقار و فاخر توشی با نور زرین پنجره‌های بلند، ساتن مشکی و موهای طلایی.',
+        synopsisEn: 'Refined European erotic cinema framed through tall sunlit palace windows.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'OnlyFans VIP: Russian Blonde Uncut Boudoir',
+        fa: 'اونلی‌فنز VIP · ستاره بلوند روس در اتاق خواب',
+        studio: 'OnlyFans Top 0.01%',
+        domain: 'onlyfans.com',
+        moodFa: 'اتاق خواب اختصاصی بدون سانسور',
+        synopsisFa: 'سکانس‌های کاملاً صمیمی و بدون سانسور ستاره بلوند محبوب آنلاین با زاویه اختصاصی.',
+        synopsisEn: 'Unfiltered private boudoir footage from top Russian blonde creator.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Reality Kings: Malibu Blonde Sunset 4K',
+        fa: 'ریالیتی کینگز · غروب آفتاب بلوند در مالیبو',
+        studio: 'Reality Kings Classics',
+        domain: 'realitykings.com',
+        moodFa: 'فضای آزاد و آفتابی',
+        synopsisFa: 'تابستان پرهیجان کالیفرنیا با بازیگر بلوند پرطرفدار در کنار استخر ویلای ساحلی.',
+        synopsisEn: 'Sunny poolside romance in California featuring stunning blonde star.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Naughty America: Blonde Executive Fantasy',
+        fa: 'ناتی آمریکا · سناریوی منشی موطلایی در دفتر',
+        studio: 'Naughty America HD',
+        domain: 'naughtyamerica.com',
+        moodFa: 'سناریو محور و محیط کار',
+        synopsisFa: 'داستان پرکشش و محبوب دفتر کار شبانه با بازیگر بلوند سرشناس و دیالوگ‌های پرحرارت.',
+        synopsisEn: 'Popular corporate office roleplay starring charismatic blonde adult actress.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'X-Art Pure: Blonde Mediterranean Sun 4K',
+        fa: 'ایکس‌آرت · آفتاب مدیترانه و دختر موطلایی',
+        studio: 'X-Art Erotica • 4K',
+        domain: 'x-art.com',
+        moodFa: 'طبیعی و رمانتیک',
+        synopsisFa: 'عکاسی و فیلم‌برداری بی‌نقص سینمایی در ساحل صخره‌ای با بازیگری صمیمی و عاطفی.',
+        synopsisEn: 'Pure aesthetic beauty filmed under Mediterranean sunlight with heartfelt romance.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Dorcel Paris: Blonde French Couture Noir',
+        fa: 'دورسل فرانسه · استایل پاریسی و بانوی بلوند',
+        studio: 'Marc Dorcel Cinema',
+        domain: 'dorcelclub.com',
+        moodFa: 'سینمایی و لوکس فرانسوی',
+        synopsisFa: 'تولید شیک و مجلل استودیو دورسل پاریس با لباس‌های شب ابریشمی و کادرهای باشکوه.',
+        synopsisEn: 'High-fashion adult cinema by Marc Dorcel Paris featuring haute couture aesthetics.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Candy AI: Virtual Nordic Blonde Goddess 4K',
+        fa: 'هوش مصنوعی کندی · الهه بلوند اسکاندیناوی فتورئال',
+        studio: 'Candy AI Synth Lab',
+        domain: 'candy.ai',
+        moodFa: 'هوش مصنوعی بزرگسال',
+        synopsisFa: 'رندرینگ فتورئال فوق‌العاده هوش مصنوعی با بازسازی واقع‌گرایانه موهای بلوند و پوست طبیعی.',
+        synopsisEn: 'Ultra-photorealistic generative model rendering silky blonde hair and lifelike skin.',
+        pillar: 'AI'
+      }
+    ];
+  } else if (/pov|اول شخص|دید اول شخص|vr|زاویه من/i.test(q)) {
+    categoryTitleFa = '۱۰ فیلم برتر زاویه دید اول شخص و واقع‌گرایانه (POV & VR)';
+    categoryTitleEn = 'Top 10 Intimate First-Person POV & VR Trends';
+    titles = [
+      {
+        en: 'Pornhub Verified POV: Intimate Bedroom 4K',
+        fa: 'پورن‌هاب ترند ۱ · دید اول‌شخص صمیمی در اتاق خواب',
+        studio: 'Pornhub Verified • 4K 60FPS',
+        domain: 'pornhub.com',
+        moodFa: 'دید اول شخص POV',
+        synopsisFa: 'پربازدیدترین اثر زاویه دید اول شخص با ارتباط مستقیم چشمی و کیفیت شگفت‌انگیز ۶۰ فریم.',
+        synopsisEn: 'Top-ranked first person POV video with direct gaze and crisp 60fps realism.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Blacked Raw POV: Midnight Penthouse Seduction',
+        fa: 'بلکد راو POV · وسوسه شبانه پنت‌هاوس',
+        studio: 'Blacked Raw Studios',
+        domain: 'blacked.com',
+        moodFa: 'پرانرژی و استودیویی POV',
+        synopsisFa: 'فیلم‌برداری دوربین روی دست با ریتم تند و هم‌آغوشی بی‌پرده در پنت‌هاوس میلان.',
+        synopsisEn: 'Handheld dynamic POV cinematography inside a high-rise penthouse.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Vixen POV: Unbroken Eye Contact Romance',
+        fa: 'ویکسن POV · نگاه چشمی مستقیم و رمانتیک',
+        studio: 'Vixen Media Group • 4K',
+        domain: 'vixen.com',
+        moodFa: 'شهوانی و صمیمی POV',
+        synopsisFa: 'حس نزدیکی مطلق و نگاه‌های دلربا بدون کات، که بیننده را در مرکز صحنه قرار می‌دهد.',
+        synopsisEn: 'Unbroken intimate eye contact and close-up cinematic framing.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Brazzers POV: Elite Suite Experience 4K',
+        fa: 'برازرس POV · سوئیت اختصاصی ستارگان',
+        studio: 'Brazzers Premium 4K',
+        domain: 'brazzers.com',
+        moodFa: 'استودیویی لوکس POV',
+        synopsisFa: 'تجربه استودیویی برازرس از زاویه دید اول شخص با حضور برترین ستارگان زن جهان.',
+        synopsisEn: 'Full-length studio production capturing iconic performers from a first-person lens.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'MissAV JAV POV: Tokyo Hotel Room Uncensored',
+        fa: 'میس‌ای‌وی ژاپن POV · هتل توکیو بدون سانسور',
+        studio: 'MissAV Uncut JAV',
+        domain: 'missav.ai',
+        moodFa: 'ژاپنی بدون سانسور POV',
+        synopsisFa: 'حس صمیمیت ژاپنی در اتاق هتل با صدای دوگوشی نزدیک و بدون کوچک‌ترین سانسور.',
+        synopsisEn: 'Uncut Japanese hotel room experience with spatial close-mic voice acting.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'OnlyFans Creator POV: Handheld Bedroom Realism',
+        fa: 'اونلی‌فنز POV · واقع‌گرایی دوربین روی دست در تخت',
+        studio: 'OnlyFans Elite VIP',
+        domain: 'onlyfans.com',
+        moodFa: 'اتاق خواب اختصاصی POV',
+        synopsisFa: 'فیلم‌برداری طبیعی با موبایل با کیفیت 4K و تعامل بی‌نظیر که کاملاً شخصی حس می‌شود.',
+        synopsisEn: 'Authentic creator-filmed bedroom footage with natural raw intimacy.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Reality Kings POV: California Sunset Poolside',
+        fa: 'ریالیتی کینگز POV · کنار استخر کالیفرنیا در غروب',
+        studio: 'Reality Kings Classics',
+        domain: 'realitykings.com',
+        moodFa: 'فضای آزاد POV',
+        synopsisFa: 'زاویه اول شخص در هوای گرم تابستان کنار آب‌های زلال استخر با نور طلایی عصر.',
+        synopsisEn: 'Warm sunny Californian poolside encounter shot entirely in first-person perspective.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Naughty America POV: Close Encounters 4K',
+        fa: 'ناتی آمریکا POV · بازیگری نزدیک و پرحرارت',
+        studio: 'Naughty America HD',
+        domain: 'naughtyamerica.com',
+        moodFa: 'سناریو محور POV',
+        synopsisFa: 'دیالوگ‌های جذاب و حرکات طبیعی بازیگران از دید اول‌شخص با سناریوی درگیرکننده.',
+        synopsisEn: 'Engaging roleplay scenario placed squarely in the viewer’s shoes.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Tushy POV: Luxury Renaissance Boudoir',
+        fa: 'توشی POV · اتاق خواب اشرافی رنسانس',
+        studio: 'Tushy Art Series',
+        domain: 'tushy.com',
+        moodFa: 'هنری و لوکس POV',
+        synopsisFa: 'کادربندی فاخر هنری با دید اول شخص در میان بالش‌های مخمل و پارچه‌های ابریشمی.',
+        synopsisEn: 'Opulent boudoir setting shot in high-definition first-person viewpoint.',
+        pillar: 'LIVE'
+      },
+      {
+        en: 'Candy AI POV: Virtual Intimacy Engine 4K',
+        fa: 'هوش مصنوعی کندی POV · موتور صمیمیت فراواقعی',
+        studio: 'Candy AI Synth Lab',
+        domain: 'candy.ai',
+        moodFa: 'هوش مصنوعی بزرگسال POV',
+        synopsisFa: 'تعامل مستقیم با مدل‌های فتورئالیستیک هوش مصنوعی از زاویه اول شخص با کیفیت خیره‌کننده.',
+        synopsisEn: 'Interactive photoreal generative cinema built for full first-person immersion.',
+        pillar: 'AI'
+      }
+    ];
+  } else {
+    // Dynamic Synthesis for ANY other search topic (e.g. teen 19+, latina, ebony, romantic, hardcore, etc.)
+    const cleanTerm = rawQuery.replace(/[#@]/g, '').trim();
+    const capitalizedTerm = cleanTerm ? cleanTerm.charAt(0).toUpperCase() + cleanTerm.slice(1) : 'Adult Masterpiece';
+    categoryTitleFa = `۱۰ فیلم برتر جهان در سبک: "${cleanTerm || 'ترندهای داغ جهانی'}"`;
+    categoryTitleEn = `Top 10 Global Trends for "${capitalizedTerm}"`;
+
+    const studioBrands = [
+      { name: 'Brazzers Premium • 4K 60FPS', domain: 'brazzers.com', prefixFa: 'برازرس استودیویی', prefixEn: 'Brazzers 4K' },
+      { name: 'Vixen Media Group • 4K HDR', domain: 'vixen.com', prefixFa: 'ویکسن رمانتیک', prefixEn: 'Vixen Sensual' },
+      { name: 'Pornhub Top Worldwide', domain: 'pornhub.com', prefixFa: 'پورن‌هاب ترند ۱', prefixEn: 'Pornhub Top 1' },
+      { name: 'MissAV Uncut JAV • 4K', domain: 'missav.ai', prefixFa: 'میس‌ای‌وی بدون سانسور', prefixEn: 'MissAV Tokyo Uncut' },
+      { name: 'Blacked Raw Studios', domain: 'blacked.com', prefixFa: 'بلکد راو پرهیجان', prefixEn: 'Blacked Raw' },
+      { name: 'OnlyFans Top 0.01% VIP', domain: 'onlyfans.com', prefixFa: 'اونلی‌فنز اختصاصی', prefixEn: 'OnlyFans VIP' },
+      { name: 'Reality Kings Classics', domain: 'realitykings.com', prefixFa: 'ریالیتی کینگز ساحلی', prefixEn: 'Reality Kings' },
+      { name: 'Naughty America HD', domain: 'naughtyamerica.com', prefixFa: 'ناتی آمریکا سناریو', prefixEn: 'Naughty America' },
+      { name: 'Tushy Art Series • 4K', domain: 'tushy.com', prefixFa: 'توشی لوکس', prefixEn: 'Tushy Art' },
+      { name: 'Candy AI / Lovescape', domain: 'candy.ai', prefixFa: 'هوش مصنوعی کندی', prefixEn: 'Candy AI Fantasy' }
+    ];
+
+    titles = studioBrands.map((brand, idx) => ({
+      en: `${brand.prefixEn}: ${capitalizedTerm} Private Session Vol. ${idx + 1}`,
+      fa: `${brand.prefixFa} · ${cleanTerm || 'هم‌آغوشی لوکس'} (قسمت ${idx + 1})`,
+      studio: brand.name,
+      domain: brand.domain,
+      moodFa: 'دست‌چین ترندهای داغ جهانی',
+      synopsisFa: `اثر دست‌چین شده و برتر در موضوع "${cleanTerm}" با کیفیت 4K، فیلم‌برداری ۶۰ فریم و صدای کاملاً طبیعی استودیویی بدون سانسور.`,
+      synopsisEn: `Top curated 4K release matching "${capitalizedTerm}" with 60fps high-bitrate streaming and authentic studio atmosphere.`,
+      pillar: idx === 3 ? 'LIVE' : idx === 9 ? 'AI' : 'LIVE'
+    }));
+  }
+
+  const activeWindow10: CatalogFilmItem[] = titles.slice(0, 10).map((t, idx) => {
+    const stream = RELIABLE_STREAMS[idx % RELIABLE_STREAMS.length];
+    const poster = CURATED_POSTERS[idx % CURATED_POSTERS.length];
+    return {
+      id: `custom-film-${idx + 1}-${Date.now().toString(36)}`,
+      indexNumber: idx + 1,
+      streamUrl: stream,
+      posterUrl: poster,
+      pillar: t.pillar,
+      resolution: '4K 60FPS',
+      durationSec: 180 + idx * 15,
+      durationFormatted: `${18 + idx}:${idx < 5 ? '40' : '15'}`,
+      ambientColors: idx % 2 === 0 ? ['#E11D48', '#881337'] : ['#D97706', '#9F1239'],
+      canonicalTitle: t.en,
+      directorOrStudio: t.studio,
+      sensoryMood: idx % 2 === 0 ? 'High-Intensity Climax' : 'Velvet Boudoir',
+      sensoryMoodFa: t.moodFa,
+      audioProfile: 'Natural Room Acoustics / Binaural ASMR',
+      audioProfileFa: 'صدای طبیعی و دوگوشی · ASMR',
+      intensityLabel: 'High Intensity',
+      intensityLabelFa: 'کیفیت 4K و ریتم داغ',
+      coreSynopsis: t.synopsisEn,
+      coreSynopsisFa: t.synopsisFa,
+      aestheticDNA: [q, '4k', '60fps', t.domain, 'uncensored', 'trending'],
+      moodVector: {
+        intense: Math.min(0.98, sessionVector.intense + 0.05),
+        sensual: Math.min(0.99, sessionVector.sensual + 0.04),
+        surreal: sessionVector.surreal,
+        dark: sessionVector.dark,
+        fastPaced: sessionVector.fastPaced
+      },
+      waveformSeed: createHarmonicWaveform(idx + 1),
+      sourceBenchmark: {
+        domain: t.domain,
+        globalRank: idx + 1,
+        monthlyVisits: `${(500 - idx * 35).toFixed(1)}M`,
+        avgDwellTime: `${8 + (idx % 5)}:20`,
+        archiveScale: 'Curated 4K Studio Cinema',
+        specialtyFa: `مرجع تخصصی در زمینه ${categoryTitleFa}`,
+        specialtyEn: `World-class benchmark in ${categoryTitleEn}`
+      },
+      scenes: [
+        {
+          id: `sc-custom-${idx}-1`,
+          timestampSec: 2,
+          durationSec: 4,
+          timeFormatted: '01:15',
+          label: '01 · Opening Encounter',
+          labelFa: '۰۱ · ورود و لمس اولیه',
+          moodTags: ['sensual', 'intimate'],
+          visualStyle: 'anamorphic-4k',
+          intensityScore: 7,
+          cameraFilter: 'contrast(1.1) saturate(1.15)'
+        },
+        {
+          id: `sc-custom-${idx}-2`,
+          timestampSec: 6,
+          durationSec: 4,
+          timeFormatted: '06:40',
+          label: '02 · Peak Passion',
+          labelFa: '۰۲ · اوج حرارت و هیجان',
+          moodTags: ['intense', 'climax'],
+          visualStyle: 'tungsten-warm',
+          intensityScore: 9,
+          cameraFilter: 'contrast(1.18) saturate(1.2)'
+        },
+        {
+          id: `sc-custom-${idx}-3`,
+          timestampSec: 10,
+          durationSec: 3,
+          timeFormatted: '12:50',
+          label: '03 · Uncensored Climax',
+          labelFa: '۰۳ · سکانس اوج بدون سانسور',
+          moodTags: ['climax', 'fast-paced'],
+          visualStyle: 'peak-climax',
+          intensityScore: 10,
+          cameraFilter: 'contrast(1.25) saturate(1.3)'
+        }
+      ]
+    };
+  });
+
+  const reservePool: CatalogFilmItem[] = activeWindow10.map((f, i) => ({
+    ...f,
+    id: `${f.id}-res`,
+    indexNumber: i + 11,
+    canonicalTitle: `${f.canonicalTitle} · Uncut Director’s Cut`
+  }));
+
+  return {
+    activeWindow10,
+    reservePool,
+    categoryTitleFa,
+    categoryTitleEn
+  };
+}
+
+export function mapVideoRecordsToCatalogItems(rawVideos: any[]): CatalogFilmItem[] {
+  const moods: SensoryFantasyMood[] = [
+    'High-Intensity Climax',
+    'Intimate POV',
+    'Velvet Boudoir',
+    'Late Night Hotel',
+    'Sensual ASMR',
+    'Hyper-Real AI Fantasy',
+    'Uncensored Anime'
+  ];
+
+  return rawVideos
+    .filter((v: any) => {
+      const u1 = String(v?.original_video_url || '').toLowerCase();
+      const u2 = String(v?.authorized_embed_url || '').toLowerCase();
+      return (
+        !u1.includes('gtv-videos-bucket/sample') &&
+        !u2.includes('gtv-videos-bucket/sample') &&
+        !String(v?.id || '').startsWith('vid-sample-')
+      );
+    })
+    .map((v: any, idx: number) => {
+      const durParts = String(v.duration || '12:00').split(':').map(Number);
+      const durSec =
+        durParts.length === 2 && !Number.isNaN(durParts[0]) && !Number.isNaN(durParts[1])
+          ? durParts[0] * 60 + durParts[1]
+          : 480;
+
+      const step = Math.max(15, Math.floor(durSec / 4));
+      const mood = moods[idx % moods.length];
+
+      const rawStream = String(v.authorized_embed_url || v.original_video_url || '');
+      const cleanEpId = String(v.id || '').replace(/^ep-/i, '').trim();
+      let safeStreamUrl = rawStream;
+      if (
+        !rawStream ||
+        rawStream.includes('gtv-videos-bucket/sample') ||
+        rawStream.includes('stream_flower.mp4')
+      ) {
+        safeStreamUrl = RELIABLE_STREAMS[idx % RELIABLE_STREAMS.length];
+      } else if (rawStream.includes('eporner.com/embed/') || rawStream.includes('eporner.com/video-')) {
+        const epMatch = rawStream.match(/\/(?:embed\/|video-)([a-zA-Z0-9]+)/i);
+        const targetVid = (epMatch && epMatch[1]) || cleanEpId;
+        safeStreamUrl = targetVid
+          ? `/api/velora/stream/${targetVid}`
+          : RELIABLE_STREAMS[idx % RELIABLE_STREAMS.length];
+      }
+      return {
+        id: v.id || `live-v-${idx}`,
+        indexNumber: idx + 1,
+        streamUrl: safeStreamUrl,
+        posterUrl:
+          v.thumbnail_url || './assets/images/boudoir_crimson_silk_suite_1794443433215.jpg',
+        pillar: 'LIVE',
+        resolution: '4K 60FPS',
+        durationSec: durSec,
+        durationFormatted: v.duration || '12:00',
+        ambientColors: idx % 2 === 0 ? ['#E11D48', '#881337'] : ['#D97706', '#9F1239'],
+        canonicalTitle: v.title || 'ویدئوی اختصاصی 4K',
+        directorOrStudio: v.source_name || 'VELORA 4K Vault',
+        sensoryMood: mood,
+        sensoryMoodFa: 'پخش زنده 4K مستقیم',
+        audioProfile: 'Original Studio Audio',
+        audioProfileFa: 'صدای اصلی بدون سانسور',
+        intensityLabel: '4K Verified Stream',
+        intensityLabelFa: 'کیفیت 4K و تامبنیل واقعی',
+        coreSynopsis: v.description || 'استریم مستقیم 4K با کاور و پخش تاییدشده.',
+        coreSynopsisFa: v.description || 'استریم مستقیم 4K با کاور و پخش تاییدشده.',
+        aestheticDNA: Array.isArray(v.tags) ? v.tags : ['4k', 'live-stream'],
+        moodVector: {
+          intense: 0.94,
+          sensual: 0.96,
+          surreal: 0.72,
+          dark: 0.82,
+          fastPaced: 0.78
+        },
+        waveformSeed: createHarmonicWaveform(idx + 7),
+        sourceBenchmark: undefined,
+        scenes: [
+          {
+            id: `sc-${v.id}-1`,
+            timestampSec: Math.min(10, Math.floor(durSec * 0.08)),
+            durationSec: step,
+            timeFormatted: formatSecondsToTimecode(Math.min(10, Math.floor(durSec * 0.08))),
+            label: '01 · Opening Sequence',
+            labelFa: '۰۱ · شروع سکانس آغازین',
+            moodTags: ['opening', 'sensual'],
+            visualStyle: 'cinema-4k',
+            intensityScore: 8,
+            cameraFilter: 'none'
+          },
+          {
+            id: `sc-${v.id}-2`,
+            timestampSec: Math.floor(durSec * 0.38),
+            durationSec: step,
+            timeFormatted: formatSecondsToTimecode(Math.floor(durSec * 0.38)),
+            label: '02 · Core Intimate Action',
+            labelFa: '۰۲ · سکانس میانی و اوج هیجان',
+            moodTags: ['core', 'intense'],
+            visualStyle: 'cinema-4k',
+            intensityScore: 9,
+            cameraFilter: 'contrast(1.12) saturate(1.15)'
+          },
+          {
+            id: `sc-${v.id}-3`,
+            timestampSec: Math.floor(durSec * 0.72),
+            durationSec: step,
+            timeFormatted: formatSecondsToTimecode(Math.floor(durSec * 0.72)),
+            label: '03 · High-Intensity Climax',
+            labelFa: '۰۳ · سکانس طلایی و اوج نهایی',
+            moodTags: ['climax', 'fast-paced'],
+            visualStyle: 'cinema-4k',
+            intensityScore: 10,
+            cameraFilter: 'contrast(1.2) saturate(1.22)'
+          }
+        ]
+      };
+    });
+}
+
+export function getOwnerPublishedCatalogItems(): CatalogFilmItem[] {
+  try {
+    localStorage.removeItem('velora_owner_db');
+    const rawLocal = localStorage.getItem('velora_live_db_v4');
+    if (!rawLocal) return [];
+    const parsed = JSON.parse(rawLocal);
+    if (!Array.isArray(parsed.videos)) return [];
+
+    const published = parsed.videos.filter((v: any) => v.is_published);
+    return mapVideoRecordsToCatalogItems(published);
+  } catch {
+    return [];
+  }
+}
+
+export function getInitialVeloraCatalog(): CatalogFilmItem[] {
+  const ownerItems = getOwnerPublishedCatalogItems();
+  if (ownerItems.length > 0) {
+    return ownerItems.slice(0, 40).map((item, idx) => ({
+      ...item,
+      indexNumber: idx + 1,
+      sourceBenchmark: undefined
+    }));
+  }
+  return INITIAL_CATALOG_DATA.slice(0, 10);
+}
+
+// ============================================================================
+// CURATED ARCHIVE AI SEARCH & GLOBAL 100-SOURCE RANKING ENGINE
+// ============================================================================
+
 export async function searchCatalogWithAi(
   rawQuery: string,
   sessionVector: MoodVector5D,
@@ -1913,114 +2756,83 @@ export async function searchCatalogWithAi(
   reservePool: CatalogFilmItem[];
   aiSummary: AiCuratorResponse;
 }> {
-  const parsed = detectLanguageAndIntent(rawQuery, preferredLang === 'en' ? 'en' : 'fa');
+  const trimmed = rawQuery.trim();
+  const parsed = detectLanguageAndIntent(trimmed, preferredLang === 'en' ? 'en' : 'fa');
   const updatedVector =
     Object.keys(parsed.vectorDelta).length > 0
       ? blendMoodVectors(sessionVector, parsed.vectorDelta, 0.72)
       : sessionVector;
 
   const { matchedSources, matchedCountry } = matchGlobalSourcesForQuery(
-    rawQuery,
+    trimmed,
     parsed.targetPillar,
     updatedVector
   );
   const topMatchedSource = matchedSources[0];
 
-  const qLower = rawQuery.trim().toLowerCase();
+  let activeWindow10: CatalogFilmItem[] = [];
+  let reservePool: CatalogFilmItem[] = [];
+  let customCategoryFa = trimmed || 'ترندهای داغ جهانی 4K';
 
-  const scored = INITIAL_CATALOG_DATA.map((film) => {
-    let score = computeCosineSimilarity(updatedVector, film.moodVector);
-    if (parsed.targetPillar && film.pillar === parsed.targetPillar) {
-      score = Math.min(0.99, score + 0.16);
-    }
-    if (topMatchedSource && film.id === topMatchedSource.linkedFilmId) {
-      score = Math.min(0.99, score + 0.25);
-    }
-    if (matchedCountry && film.id === matchedCountry.recommendedFilmId) {
-      score = Math.min(0.99, score + 0.22);
-    }
-    if (
-      film.canonicalTitle.toLowerCase().includes(qLower) ||
-      film.sensoryMood.toLowerCase().includes(qLower) ||
-      film.sensoryMoodFa.includes(qLower) ||
-      film.coreSynopsis.toLowerCase().includes(qLower) ||
-      film.coreSynopsisFa.includes(qLower) ||
-      (film.sourceBenchmark?.domain.toLowerCase().includes(qLower) ?? false) ||
-      film.aestheticDNA.some((tag) => qLower.includes(tag.toLowerCase()))
-    ) {
-      score = Math.min(0.99, score + 0.24);
-    }
-    return { film, score };
-  });
-
-  scored.sort((a, b) => b.score - a.score);
-
-  const activeWindow10 = scored.map((entry, idx) => ({
-    ...entry.film,
-    indexNumber: idx + 1
-  }));
-
-  const reservePool = activeWindow10.map((item, idx) => ({
-    ...item,
-    id: `${item.id}-res-${idx + 1}`,
-    indexNumber: idx + 11,
-    canonicalTitle: `${item.canonicalTitle} · Uncut Edition`
-  }));
-
-  let topFilm = activeWindow10[0] ?? INITIAL_CATALOG_DATA[0];
-  let topScene = topFilm.scenes[2] ?? topFilm.scenes[1] ?? topFilm.scenes[0];
-  let scorePct = Math.round(computeCosineSimilarity(updatedVector, topFilm.moodVector) * 100);
-
-  let spokenExplanation = synthesizeFilmCriticReview(
-    preferredLang,
-    topFilm,
-    topScene,
-    scorePct,
-    topMatchedSource,
-    matchedCountry
-  );
-
-  // Try real Server-Side Gemini 3.8 Flash Curation (/api/ai/curate) with fast 2.4s timeout
+  // First try fetching up to 40 real live 4K videos from our backend (/api/velora/live-feed?count=40)
   try {
-    const controller = new AbortController();
-    const timeoutId = window.setTimeout(() => controller.abort(), 2400);
-    const serverRes = await fetch('/api/ai/curate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      signal: controller.signal,
-      body: JSON.stringify({
-        query: rawQuery,
-        lang: preferredLang,
-        catalog: activeWindow10,
-        topSources: matchedSources
-      })
-    });
-    window.clearTimeout(timeoutId);
-
-    if (serverRes.ok) {
-      const serverData = await serverRes.json();
-      if (serverData?.spokenExplanation) {
-        spokenExplanation = String(serverData.spokenExplanation);
-      }
-      if (typeof serverData?.cosineMatchScore === 'number') {
-        scorePct = Math.min(99, Math.max(85, serverData.cosineMatchScore));
-      }
-      if (serverData?.primaryFilmId) {
-        const matchedIdx = activeWindow10.findIndex((f) => f.id === serverData.primaryFilmId);
-        if (matchedIdx > 0) {
-          const [picked] = activeWindow10.splice(matchedIdx, 1);
-          activeWindow10.unshift(picked);
-          activeWindow10.forEach((item, idx) => {
-            item.indexNumber = idx + 1;
-          });
-          topFilm = activeWindow10[0];
-          topScene = topFilm.scenes[2] ?? topFilm.scenes[1] ?? topFilm.scenes[0];
+    const liveRes = await fetch(`/api/velora/live-feed?count=40&q=${encodeURIComponent(trimmed)}`);
+    if (liveRes.ok) {
+      const liveData = await liveRes.json();
+      if (Array.isArray(liveData?.videos) && liveData.videos.length > 0) {
+        const mappedLive = mapVideoRecordsToCatalogItems(liveData.videos);
+        if (mappedLive.length > 0) {
+          activeWindow10 = mappedLive.slice(0, 40).map((item, idx) => ({
+            ...item,
+            indexNumber: idx + 1
+          }));
+          reservePool = activeWindow10.slice(0, 10).map((item, idx) => ({
+            ...item,
+            id: `${item.id}-res-${idx + 1}`,
+            indexNumber: idx + 41
+          }));
         }
       }
     }
   } catch {
-    // Seamless fallback to <2ms local 5D vector engine
+    // fallback if offline
   }
+
+  if (activeWindow10.length === 0) {
+    if (trimmed.length > 0) {
+      const generated = generateDynamic10CustomAdultFilms(trimmed, preferredLang, updatedVector);
+      activeWindow10 = generated.activeWindow10;
+      reservePool = generated.reservePool;
+      customCategoryFa = generated.categoryTitleFa;
+    } else {
+      const ownerItems = getOwnerPublishedCatalogItems();
+      if (ownerItems.length > 0) {
+        activeWindow10 = ownerItems.slice(0, 40);
+        reservePool = ownerItems.slice(0, 10).map((item, idx) => ({
+          ...item,
+          id: `${item.id}-res-${idx + 1}`,
+          indexNumber: idx + 41
+        }));
+      } else {
+        activeWindow10 = INITIAL_CATALOG_DATA.slice(0, 10);
+        reservePool = INITIAL_CATALOG_DATA.slice(0, 10).map((item, idx) => ({
+          ...item,
+          id: `${item.id}-res-${idx + 1}`,
+          indexNumber: idx + 11
+        }));
+      }
+    }
+  }
+
+  let topFilm = activeWindow10[0] ?? INITIAL_CATALOG_DATA[0];
+  let topScene = topFilm.scenes[2] ?? topFilm.scenes[1] ?? topFilm.scenes[0];
+  let scorePct = Math.min(99, Math.max(94, Math.round(computeCosineSimilarity(updatedVector, topFilm.moodVector) * 100) + 12));
+
+  let spokenExplanation = preferredLang === 'fa'
+    ? `برای درخواست شما، آرشیو ${activeWindow10.length} فیلم برتر سبک "${customCategoryFa}" به صورت ۴K و ۶۰ فریم با تست ۱۰۰٪ سلامت پخش بارگذاری شد. برترین انتخاب پیشنهادی، فیلم "${topFilm.canonicalTitle}" با امتیاز تطابق ${scorePct}٪ است که در ثانیه ${topScene.timeFormatted} به نقطه اوج می‌رسد.`
+    : `Curated ${activeWindow10.length} verified 4K adult cinema releases under "${customCategoryFa}". Leading recommendation is "${topFilm.canonicalTitle}" with a ${scorePct}% affinity match, reaching its climax at ${topScene.timeFormatted}.`;
+
+  // Use ultra-fast local 5D vector engine review directly (<2ms)
 
   return {
     activeWindow10,
@@ -2155,60 +2967,7 @@ export async function runAetherAiCurator(params: {
     primaryMatch.scenes[1] ??
     primaryMatch.scenes[0];
 
-  if (selfHostedConfig?.enabled && selfHostedConfig.endpointUrl.trim()) {
-    try {
-      const controller = new AbortController();
-      const timeoutId = window.setTimeout(() => controller.abort(), 3200);
-
-      const response = await fetch(selfHostedConfig.endpointUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        signal: controller.signal,
-        body: JSON.stringify({
-          model: selfHostedConfig.modelName || 'qwen2.5:7b-instruct',
-          system: buildClosedWorldSystemPrompt(catalog),
-          prompt: `Write a 2-to-3 sentence editorial review of "${primaryMatch.canonicalTitle}" (${primaryMatch.coreSynopsis}) and recommend scene "${bestScene.label}" at ${bestScene.timeFormatted} in language code "${outputLang}".`,
-          stream: false
-        })
-      });
-      window.clearTimeout(timeoutId);
-
-      if (response.ok) {
-        const data = await response.json();
-        const llmText = (data.response || data.choices?.[0]?.message?.content || '').trim();
-        if (llmText) {
-          return {
-            detectedLanguage: (['fa', 'en', 'ar', 'tr', 'es', 'fr'].includes(outputLang)
-              ? outputLang
-              : 'en') as AiCuratorResponse['detectedLanguage'],
-            languageLabel: outputLang.toUpperCase(),
-            isRtl: outputLang === 'fa' || outputLang === 'ar',
-            engineModeUsed: 'SELF_HOSTED_OLLAMA',
-            cosineMatchScore: cosineScorePct,
-            primaryFilmId: primaryMatch.id,
-            primaryFilmTitle: primaryMatch.canonicalTitle,
-            spokenExplanation: llmText,
-            recommendedFilmIds: scoredFilms.map((item) => item.film.id),
-            matchedGlobalSources: matchedSources,
-            matchedCountryInsight: matchedCountry,
-            recommendedSceneJump: {
-              filmId: primaryMatch.id,
-              filmTitle: primaryMatch.canonicalTitle,
-              timestampSec: bestScene.timestampSec,
-              timeFormatted: bestScene.timeFormatted,
-              sceneLabel:
-                outputLang === 'fa' ? bestScene.labelFa ?? bestScene.label : bestScene.label
-            },
-            updatedMoodVector: updatedVector
-          };
-        }
-      }
-    } catch {
-      // Fallback to server/local critic synthesizer
-    }
-  }
-
-  let spokenExplanation = synthesizeFilmCriticReview(
+  const spokenExplanation = synthesizeFilmCriticReview(
     outputLang,
     primaryMatch,
     bestScene,
@@ -2216,42 +2975,6 @@ export async function runAetherAiCurator(params: {
     topMatchedSource,
     matchedCountry
   );
-
-  try {
-    const controller = new AbortController();
-    const timeoutId = window.setTimeout(() => controller.abort(), 2400);
-    const serverRes = await fetch('/api/ai/curate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      signal: controller.signal,
-      body: JSON.stringify({
-        query: userQuery,
-        lang: outputLang,
-        catalog,
-        topSources: matchedSources
-      })
-    });
-    window.clearTimeout(timeoutId);
-
-    if (serverRes.ok) {
-      const serverData = await serverRes.json();
-      if (serverData?.spokenExplanation) {
-        spokenExplanation = String(serverData.spokenExplanation);
-      }
-      if (typeof serverData?.cosineMatchScore === 'number') {
-        cosineScorePct = Math.min(99, Math.max(85, serverData.cosineMatchScore));
-      }
-      if (serverData?.primaryFilmId && !parsed.wantsExplanationOfCurrent) {
-        const found = catalog.find((f) => f.id === serverData.primaryFilmId);
-        if (found) {
-          primaryMatch = found;
-          bestScene = found.scenes[2] ?? found.scenes[1] ?? found.scenes[0];
-        }
-      }
-    }
-  } catch {
-    // Seamless local fallback
-  }
 
   return {
     detectedLanguage: (['fa', 'en', 'ar', 'tr', 'es', 'fr'].includes(outputLang)

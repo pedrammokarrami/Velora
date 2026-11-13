@@ -23,16 +23,14 @@ class AetherErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       return (
-        <div
-          dir="rtl"
-          className="h-[100dvh] w-full bg-[#030306] text-white flex flex-col items-center justify-center p-6 text-center gap-4"
-        >
-          <p className="text-sm text-white/80">در حال بازنشانی موتور تصویر سه‌بعدی AETHER...</p>
+        <div className="min-h-[100dvh] w-full bg-[#070b14] text-slate-100 flex flex-col items-center justify-center p-6 text-center gap-4">
+          <p className="font-editorial text-2xl text-[#D4AF37]">AETHER</p>
           <button
+            type="button"
             onClick={() => this.setState({ hasError: false })}
-            className="px-5 py-2.5 rounded-full bg-white text-black text-xs font-semibold cursor-pointer"
+            className="min-h-[44px] px-6 py-2.5 rounded-full bg-[#D4AF37] text-[#070b14] text-sm font-semibold cursor-pointer transition-transform active:scale-95"
           >
-            ادامه تماشا
+            Reload Discovery
           </button>
         </div>
       );
